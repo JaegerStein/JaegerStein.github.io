@@ -141,6 +141,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/.sculeru/commit</li>
+
 <li>$:/.sculeru/macro</li>
 
 <li>$:/config/AnimationDuration</li>
@@ -154,6 +156,8 @@ Error message and password prompt
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/info</li>
 
 <li>$:/core</li>
+
+<li>$:/core/modules/savers/github.js</li>
 
 <li>$:/DefaultTiddlers</li>
 
@@ -325,6 +329,9 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20210715165616616" creator="Keks" modified="20210715165943528" modifier="Keks" tags="" title="$:/.sculeru/commit">
+<pre>Commit Message Test</pre>
+</div>
 <div created="20210713214104343" creator="Keks" modified="20210713214142374" modifier="Keks" tags="$:/tags/Macro" title="$:/.sculeru/macro">
 <pre>\define i() &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</pre>
 </div>
@@ -10207,6 +10214,129 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20210715170112706" creator="Keks" modified="20210715170218014" modifier="Keks" module-type="saver" title="$:/core/modules/savers/github.js" type="application/javascript">
+<pre>/*\
+title: $:/core/modules/savers/github.js
+type: application/javascript
+module-type: saver
+
+Saves wiki by pushing a commit to the GitHub v3 REST API
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+&quot;use strict&quot;;
+
+/*
+Select the appropriate saver module and set it up
+*/
+var GitHubSaver = function(wiki) {
+	this.wiki = wiki;
+};
+
+GitHubSaver.prototype.save = function(text,method,callback) {
+	var self = this,
+		username = this.wiki.getTiddlerText(&quot;$:/GitHub/Username&quot;),
+		password = $tw.utils.getPassword(&quot;github&quot;),
+		repo = this.wiki.getTiddlerText(&quot;$:/GitHub/Repo&quot;),
+		path = this.wiki.getTiddlerText(&quot;$:/GitHub/Path&quot;,&quot;&quot;),
+		filename = this.wiki.getTiddlerText(&quot;$:/GitHub/Filename&quot;),
+		branch = this.wiki.getTiddlerText(&quot;$:/GitHub/Branch&quot;) || &quot;main&quot;,
+		endpoint = this.wiki.getTiddlerText(&quot;$:/GitHub/ServerURL&quot;) || &quot;https://api.github.com&quot;,
+		headers = {
+			&quot;Accept&quot;: &quot;application/vnd.github.v3+json&quot;,
+			&quot;Content-Type&quot;: &quot;application/json;charset=UTF-8&quot;,
+			&quot;Authorization&quot;: &quot;Basic &quot; + window.btoa(username + &quot;:&quot; + password),
+			&quot;If-None-Match&quot;: &quot;&quot;
+		};
+	// Bail if we don't have everything we need
+	if(!username || !password || !repo || !filename) {
+		return false;
+	}
+	// Make sure the path start and ends with a slash
+	if(path.substring(0,1) !== &quot;/&quot;) {
+		path = &quot;/&quot; + path;
+	}
+	if(path.substring(path.length - 1) !== &quot;/&quot;) {
+		path = path + &quot;/&quot;;
+	}
+	// Compose the base URI
+	var uri = endpoint + &quot;/repos/&quot; + repo + &quot;/contents&quot; + path;
+	// Perform a get request to get the details (inc shas) of files in the same path as our file
+	$tw.utils.httpRequest({
+		url: uri,
+		type: &quot;GET&quot;,
+		headers: headers,
+		data: {
+			ref: branch
+		},
+		callback: function(err,getResponseDataJson,xhr) {
+			var getResponseData,sha = &quot;&quot;;
+			if(err &amp;&amp; xhr.status !== 404) {
+				return callback(err);
+			}
+			if(xhr.status !== 404) {
+				getResponseData = JSON.parse(getResponseDataJson);
+				$tw.utils.each(getResponseData,function(details) {
+					if(details.name === filename) {
+						sha = details.sha;
+					}
+				});
+			}
+			var data = {
+				message: $tw.getRawString(&quot;.sculeru/commit&quot;),
+                // $tw.language.getRawString(&quot;ControlPanel/Saving/GitService/CommitMessage&quot;),
+				content: $tw.utils.base64Encode(text),
+				branch: branch,
+				sha: sha
+			};
+			// Perform a PUT request to save the file
+			$tw.utils.httpRequest({
+				url: uri + filename,
+				type: &quot;PUT&quot;,
+				headers: headers,
+				data: JSON.stringify(data),
+				callback: function(err,putResponseDataJson,xhr) {
+					if(err) {
+						return callback(err);
+					}
+					var putResponseData = JSON.parse(putResponseDataJson);
+					callback(null);
+				}
+			});
+		}
+	});
+	return true;
+};
+
+/*
+Information about this saver
+*/
+GitHubSaver.prototype.info = {
+	name: &quot;github&quot;,
+	priority: 2000,
+	capabilities: [&quot;save&quot;, &quot;autosave&quot;]
+};
+
+/*
+Static method that returns true if this saver is capable of working
+*/
+exports.canSave = function(wiki) {
+	return true;
+};
+
+/*
+Create an instance of this saver
+*/
+exports.create = function(wiki) {
+	return new GitHubSaver(wiki);
+};
+
+})();
+</pre>
+</div>
 <div created="20210704210917395" creator="Keks" modified="20210712134104554" modifier="Keks" title="$:/DefaultTiddlers">
 <pre>[[Sculéru]]
 [[Welt]]
@@ -14195,8 +14325,8 @@ Error message and password prompt
 <div created="20210712115227889" creator="Keks" modified="20210712115231809" modifier="Keks" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/themes/tiddlywiki/centralised">
 <pre>no</pre>
 </div>
-<div created="20210712134928449" creator="Keks" modified="20210712134929525" modifier="Keks" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20210712134928449" creator="Keks" modified="20210715170004338" modifier="Keks" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20210712114845409" creator="Keks" modified="20210712114851638" modifier="Keks" title="$:/state/editpreviewtype">
 <pre>$:/core/ui/EditTemplate/body/preview/output</pre>
@@ -14207,8 +14337,8 @@ Error message and password prompt
 <div created="20210712134838016" creator="Keks" modified="20210712134841745" modifier="Keks" title="$:/state/folded/Welt">
 <pre>show</pre>
 </div>
-<div created="20210712114837616" creator="Keks" modified="20210713205329261" modifier="Keks" title="$:/state/showeditpreview">
-<pre>yes</pre>
+<div created="20210712114837616" creator="Keks" modified="20210715170105341" modifier="Keks" title="$:/state/showeditpreview">
+<pre>no</pre>
 </div>
 <div created="20210704210610637" modified="20210704210610637" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
@@ -14219,23 +14349,23 @@ Error message and password prompt
 <div created="20210712114731652" creator="Keks" modified="20210712115225748" modifier="Keks" title="$:/state/tab--1418380610">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
 </div>
-<div created="20210706210104391" creator="Keks" modified="20210712134929525" modifier="Keks" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20210706210104391" creator="Keks" modified="20210715170004339" modifier="Keks" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20210704204733393" modified="20210704210730467" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/StoryView</pre>
 </div>
-<div created="20210704204549924" creator="Keks" modified="20210715164657823" modifier="Keks" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20210704204549924" creator="Keks" modified="20210715165239628" modifier="Keks" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20210704205808925" creator="Keks" modified="20210715164543417" modifier="Keks" title="$:/state/tab-2065006209">
+<div created="20210704205808925" creator="Keks" modified="20210715165252104" modifier="Keks" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20210707170241069" creator="Keks" modified="20210713213348252" modifier="Keks" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Explorer</pre>
+<div created="20210707170241069" creator="Keks" modified="20210715165602735" modifier="Keks" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20210704205300562" creator="Keks" modified="20210714141654342" modifier="Keks" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20210704205300562" creator="Keks" modified="20210715165559703" modifier="Keks" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20210704205856024" modified="20210704210531155" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditorToolbar</pre>
@@ -14264,7 +14394,7 @@ Error message and password prompt
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20210715164521015" creator="Keks" list="Sculéru Welt" modified="20210715164709677" modifier="Keks" title="$:/StoryList">
+<div created="20210715164521015" creator="Keks" list="$:/.sculeru/commit $:/.sculeru/macro $:/AdvancedSearch $:/language/ControlPanel/Saving/GitService/CommitMessage $:/core/modules/savers/github.js" modified="20210715170009451" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210704210539320" modified="20210704210550400" title="$:/theme">

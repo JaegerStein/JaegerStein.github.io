@@ -149,9 +149,17 @@ Error message and password prompt
 
 <li>$:/config/AutoSave</li>
 
+<li>$:/config/DefaultMoreSidebarTab</li>
+
+<li>$:/config/DefaultSidebarTab</li>
+
+<li>$:/config/Navigation/UpdateAddressBar</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
 <li>$:/config/RelinkOnRename</li>
+
+<li>$:/config/Toolbar/ButtonClass</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/info</li>
 
@@ -228,6 +236,8 @@ Error message and password prompt
 <li>$:/state/tab--1498284803</li>
 
 <li>$:/state/tab--1963855381</li>
+
+<li>$:/state/tab--2112689675</li>
 
 <li>$:/state/tab-1749438307</li>
 
@@ -399,11 +409,23 @@ Error message and password prompt
 <div created="20210707170050553" modified="20210707170050553" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
+<div created="20210717170930753" creator="Keks" modified="20210717170930753" modifier="Keks" title="$:/config/DefaultMoreSidebarTab">
+<pre>$:/core/ui/MoreSideBar/Missing</pre>
+</div>
+<div created="20210717170935303" creator="Keks" modified="20210717170935303" modifier="Keks" title="$:/config/DefaultSidebarTab">
+<pre>$:/core/ui/SideBar/Recent</pre>
+</div>
+<div created="20210717171003077" creator="Keks" modified="20210717171006237" modifier="Keks" title="$:/config/Navigation/UpdateAddressBar">
+<pre>permaview</pre>
+</div>
 <div created="20210704205900492" modified="20210704205900492" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
 </div>
 <div created="20210706202417832" modified="20210706202417832" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
+</div>
+<div created="20210717171030726" creator="Keks" modified="20210717171041955" modifier="Keks" title="$:/config/Toolbar/ButtonClass">
+<pre>tc-btn-invisible</pre>
 </div>
 <div created="20210704205851706" modified="20210704205854057" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/info">
 <pre>hide</pre>
@@ -10427,8 +10449,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20210717125318140" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>added &quot;Metamagie&quot; and links to missing articles</pre>
+<div created="20210715231539247" creator="Keks" modified="20210717171139383" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>edited settings for url</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14420,8 +14442,11 @@ exports.create = function(wiki) {
 <div created="20210704204733393" creator="Keks" modified="20210715231251341" modifier="Keks" title="$:/state/tab--1963855381">
 <pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
-<div created="20210704204549924" creator="Keks" modified="20210715231702062" modifier="Keks" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20210717170833461" creator="Keks" modified="20210717170833461" modifier="Keks" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Advanced</pre>
+</div>
+<div created="20210704204549924" creator="Keks" modified="20210717170919699" modifier="Keks" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Settings</pre>
 </div>
 <div created="20210704205808925" creator="Keks" modified="20210715165252104" modifier="Keks" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -14429,7 +14454,7 @@ exports.create = function(wiki) {
 <div created="20210707170241069" creator="Keks" modified="20210717125305534" modifier="Keks" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Missing</pre>
 </div>
-<div created="20210704205300562" creator="Keks" modified="20210717125320308" modifier="Keks" title="$:/state/tab/sidebar--595412856">
+<div created="20210704205300562" creator="Keks" modified="20210717171056053" modifier="Keks" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210704205856024" modified="20210704210531155" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -14459,7 +14484,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20210717121030737" creator="Keks" list="$:/language/ControlPanel/Saving/GitService/CommitMessage $:/STRG+UMSCHALT+R Sculéru Welt" modified="20210717125301991" modifier="Keks" title="$:/StoryList">
+<div list="$:/language/ControlPanel/Saving/GitService/CommitMessage $:/STRG+UMSCHALT+R Sculéru Welt" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14589,7 +14614,7 @@ exports.create = function(wiki) {
 <div created="20210704210110739" modified="20210704210114711" title="$:/themes/tiddlywiki/vanilla/metrics/storywidth">
 <pre>770px</pre>
 </div>
-<div created="20210704205913843" modified="20210704205913843" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
+<div created="20210704205913843" creator="Keks" modified="20210717170905607" modifier="Keks" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
 </div>
 <div created="20210704205926353" modified="20210704205926353" title="$:/themes/tiddlywiki/vanilla/options/stickytitles">

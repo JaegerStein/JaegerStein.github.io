@@ -297,6 +297,8 @@ Error message and password prompt
 
 <li>Attribute</li>
 
+<li>Fähigkeiten</li>
+
 <li>Regelwerk</li>
 
 </ul>
@@ -10366,8 +10368,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220714204844749" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>added Attribute</pre>
+<div created="20210715231539247" creator="Keks" modified="20220715162613510" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>added Fähigkeiten</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14410,7 +14412,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220714203852915" creator="Keks" list="$:/STRG+UMSCHALT+R Regelwerk Attribute $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220714203852915" modifier="Keks" title="$:/StoryList">
+<div created="20220715160611078" creator="Keks" list="$:/STRG+UMSCHALT+R Regelwerk $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220715160935564" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14549,7 +14551,7 @@ exports.create = function(wiki) {
 <div created="20210704205837003" modified="20210704205839283" title="$:/view">
 <pre>classic</pre>
 </div>
-<div created="20220714203939773" creator="Keks" modified="20220714204829281" modifier="Keks" title="Attribute">
+<div created="20220714203939773" creator="Keks" modified="20220715160623551" modifier="Keks" title="Attribute">
 <pre>Jeder Charakter besitzt ''8 Attribute'', die dessen körperlichen und geistigen Fähigkeiten beschreiben. Jedes Attribut kann einen Wert von 1 bis 20 annehmen und abhängig davon das Ergebnis betroffener Würfe verschlechtern oder verbessern. Der Standardwert eines jeden Attributs ist 10 und gibt keine Boni auf Würfe.
 
 ! Rechnen mit Attributen
@@ -14601,6 +14603,108 @@ Weisheit gibt das allgemeine Wissen eines Charakters über diverse Fähigkeiten 
 
 !! CHARISMA
 Charisma misst die Überzeugungskraft, Eloquenz und Führungsstärke eines Charakters. Charisma verändert nicht die körperliche Attraktivität, sehr wohl jedoch die Fähigkeit mit Worten zu betören.
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20220715155928546" creator="Keks" modified="20220715162550275" modifier="Keks" title="Fähigkeiten">
+<pre>Unter Fähigkeiten werden die alltäglichen und weniger üblichen Befähigungen eines Charakters verstanden. Diese geben Boni in Höhe der Fähigkeitsstufe auf entsprechende Würfe. Fähigkeitskosten berechnen sich identisch zu den [[Attributskosten|Attribute]]. Der Standardwert jeder Fähigkeit ist 0.
+
+Ein Beispiel.&lt;br&gt;
+//Ein Fähigkeit mit dem Wert 3 bringt einen Bonus von +3 auf entsprechende Würfe und kostet 6 Punkte.//
+
+! Fähigkeiten
+Jede Fähigkeit ist einem der 8 Attribute zugeordnet. Falls bei einem Wurf ein Fähigkeiten-Bonus angewendet wird, muss zuvor stets der Bonus des entsprechendes Attributs angewendet werden.
+
+Die existierenden Fähigkeiten nach Attribut aufgelistet sind:
+
+&lt;div style=&quot;width:90%;margin:auto;&quot;&gt;
+
+!! Stärke
+''Kraftakt'': Bei längerfristiger, konstanter Anstrengung - etwa beim Armdrücken, blockieren einer Tür (hinter der Feinde versuchen durchzubrechen), oder beim Tragen einer schweren Last - kommt Kraftakt zum Einsatz.
+
+!! Athletik
+''Akrobatik'': Hilft auf unwegsamen Gelände das Gleichgewicht zu halten, beim Überqueren von Hindernissen, beim Springen, Abrollen nach einem Sturz, Radschlagen, etc.
+
+''Heimlichkeit'': Beeinflusst, wie leise und verstohlen man sich an Feinde heranschleichen und in dunklen Schatten verborgen halten kann.
+
+''Klettern'': Hilft beim erklimmen von Objekten, sei dieses eine efeubewachsene Mauer, ein herabhängendes Seil, oder ein titanisches Monster.
+
+''Reiten'': Beschreibt das Können eines Charakters, sich im Sattel zu halten, aber die Fähigkeit das Reittier zu lenken.
+
+''Schwimmen'': Wer nicht schwimmen kann, wird in den Fluten versinken.
+
+!! Geschick
+''Instrument'': Die Fähigkeit, mit verschiedenen Sorten von Instrumenten umgehen zu können.
+
+''Fesselungskunst'': Bestimmt, wie gut ein Charakter im Knotenbinden ist und diese auch wieder zu lösen. Verpflichtend für jeden guten Seemann, Bühnenmagier und Hobbyentführer.
+
+''Fingerfertigkeit'': Das Geschick eines Charakters beim Schlossknacken, Taschendiebstahl, Betrügen beim Kartenspiel, etc.
+
+''Gaukelei'': Verbessert die Hand-Auge-Koordination beim Fangen und Werfen, etwa fürs Jonglieren, und ermöglicht Taschenspielertricks.
+
+!! Konstitution
+''Widerstand'': Hilft Charakteren wieder auf die Beine zu kommen, wenn ihnen im Kampf die Ausdauer ausgegangen ist und addiert sich zum Rettungswurf.
+
+!! Wahrnehmung
+''Einschätzen'': Beeinflusst, wie gut man sein Gegenüber lesen kann und etwa eine Lüge erkennt, oder ob das Raubtier vor einem wütend aussieht.
+
+''Spurensuche'': Zeigt dem Charakter die Fährte eines Verfolgten, relevante Hinweise in einem Raum, eine versteckte Geheimtür, etc.
+
+''Lippenlesen'': &lt;span style=&quot;white-space:pre;&quot;&gt;👁️👄👁️💬   👁️👄👁️                 👀&lt;/span&gt;
+
+!! Intelligenz
+''Motiv Erkennen'': Wer eine Lüge erkannt hat kann so versuchen den Grund dahinter herauszufinden. Was bereits vom Charakter wahrgenommen wurde kann interpretiert werden.
+
+''Nachforschen'': Sollte der Charakter bei seinen Ermittlungen mal in eine Sackgasse gelangen, kann er so herausfinden, wonach genau er eigentlich suchen sollte. Nachforschen hilft wichtige Informationen vom Irrelevanten zu trennen.
+
+''Schätzen'': Hilft den Preis von Gegenständen zu ermitteln, magische Eigenschaften eines Artefakts zu erkennen, in einem Raum augenblicklich die wertvollsten Objekte zu finden, etc.
+
+''Sprachenkunde'': Ermöglicht es die Bedeutung alter Runen zu ergründen, Handzeichen zu interpretieren, Chiffren zu entschlüsseln, Geheimbotschaften in normal wirkenden Texten zu finden, etc.
+Sprachenkunde ist nicht identisch mit dem Erlernen einer Sprache; korrekten Übersetzungen kann man sich nur annähern.
+
+''Tarnen'': Gibt an, wie gut man das eigene Nachtlager im Wald vor fremden Blicken schützen kann, wo man am besten das eigene Geld im Zimmer verbirgt, and welchem Ort man sich am besten selbst versteckt, etc.
+
+!! Weisheit
+''Handwerk'': Charakteren steht eine Vielzahl von handwerklichen Beschäftigungen zur Verfügung, die nach Belieben (und Ermessen des Spielleiters) selbst definiert werden können. Die Handwerksfähigkeit hilft bei der Herstellung entsprechender Objekte.
+
+''Heilkunde'': Der Charakter kennt sich mit dem (un)menschlichen Körper aus und weiß die richtige Arznei und Behandlung anzuwenden, um leichte und schwere Verletzungen heilen zu können. Mit diesen Kenntnissen geht natürlich auch das Wissen über schädliche Mittel einher.
+
+''Überlebenskunst'': Hilft dabei sich in freier Natur zurechtzufinden, dem Abendessen eine Falle zu stellen, ein Feuer mit nichts außer ein paar Stöcken und Reisig zu entfachen, und keinen hochgiftigen Pilz zu verspeisen. Naturwissen aus Lehrbüchern ist nicht das gleiche wie Erfahrungen aus erster Hand.
+
+!! Charisma
+''Auftreten'': Beschreibt eine Vielzahl von Charisma-Fähigkeiten, die besonders für Darsteller wichtig sind. Dazu gehören Gesang, Tanzen, Schauspiel (welches nicht gleichzusetzen ist mit Täuschen), Komik und Redekunst (für fesselnde Geschichten am Lagerfeuer).
+
+''Betören'': Wer andere entgegen ihrer Vernunft von sich überzeugen und zu unverantwortlichem Handeln hinreißen möchte, sollte die Fähigkeit der Betörung erlernen.
+
+''Diplomatie'': Wird benutzt, um andere vom eigenen Standpunkt zu überzeugen, erboste Personen zu besänftigen, souverän Verhandlungen zu führen und bei Hofe die Etikette nicht zu verletzen.
+
+''Einschüchtern'': Lässt Feinde demoralisiert zurück, sichert die Fügsamkeit von zart Besaiteten und überzeugt andere ohne dessen Einverständnis vom eigenen Standpunkt. Rückständige Barbaren mit der Eloquenz eines Wildtieres können statt Charisma auch Stärke für diese Fähigkeit benutzten, solange sie die entsprechende [[Eigenschaft|Eigenschaften]] besitzen.
+
+''Mit Tieren umgehen'': Apropos Wildtiere; mit dieser Fähigkeit lassen sich verängstigte Pferde beruhigen, bissige Hunde besänftigen und wilde Wölfe verschrecken (Dies ist kein Freifahrtschein zum Bären-Zähmen!). Auch ganz praktisch, um das Verhalten von Tieren richtig zu interpretieren, bevor man angefallen wird.
+
+''Täuschen'': Du möchtest andere Unwahrheiten glauben lassen? Ihnen falsche Versprechungen machen? Bei Verträgen übervorteilen, ohne erwischt zu werden? Dann ist Täuschen das richtige für dich! Lüge noch heute deinen Kameraden dreist ins Gesicht und überzeuge sie davon, du wüsstest nicht, wo ihr Geld abgeblieben ist!
+
+''Verkleiden'': Sobald deine Lügen letztendlich doch auffliegen solltest du in der Lage sein, dir eine gute Verkleidung zuzulegen, um vor aller Augen und ohne Verdacht zu schöpfen das Weite suchen zu können.
+
+&lt;hr&gt;
+
+!!Wissen:
+
+Wissen ist eine gesondert aufgelistete Fähigkeit und fällt unter das Attribut Weisheit. Wissen ist unterteilt in folgende Kategorien:
+
+''Adel'': Bestimmt das Wissen über Hofetikette, adelige Stammbäume, Heraldik, und vermittelt generell, welchen Würdenträgern man nicht auf die Füße treten sollte. Lässt sich auch auf besonders wichtige und reiche Händler anwenden, die sind Adel ehrenhalber.
+
+''Geografie'': Hilfreich bei der Orientierung, was willst du von mir hören?
+
+''Geschichte'': Die Basis-Fähigkeit von Historikern und anderen seltsamen Leuten, die sich gerne irrelevante Fakten aus der Vergangenheit merken.
+
+''Lokales'': Besonders hilfreich für fremdländische Spione, die sich unters Volk mischen wollen. Das Wissen über lokale Bräuche, Redewendungen und generell ortsspezifische Referenzen ist unter dieser Fähigkeit zusammengefasst.
+
+''Magie'': != Anwendung von Magie, können auch nicht-Magier haben
+
+''Natur'': Baum
+
+''Religion'':
 
 &lt;/div&gt;</pre>
 </div>

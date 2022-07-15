@@ -303,6 +303,8 @@ Error message and password prompt
 
 <li>Fähigkeiten</li>
 
+<li>Rast</li>
+
 <li>Regelwerk</li>
 
 <li>Talente</li>
@@ -10374,8 +10376,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220715182559738" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>added Ausdauer</pre>
+<div created="20210715231539247" creator="Keks" modified="20220715183318188" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>added Rast</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14418,7 +14420,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220715172419565" creator="Keks" list="$:/STRG+UMSCHALT+R Regelwerk $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220715182317617" modifier="Keks" title="$:/StoryList">
+<div created="20220715172419565" creator="Keks" list="$:/STRG+UMSCHALT+R Regelwerk $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220715182628583" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14612,7 +14614,7 @@ Charisma misst die Überzeugungskraft, Eloquenz und Führungsstärke eines Chara
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20220715180935572" creator="Keks" modified="20220715182504007" modifier="Keks" title="Ausdauer">
+<div created="20220715180935572" creator="Keks" modified="20220715182747072" modifier="Keks" title="Ausdauer">
 <pre>Analog zu klassischen Rollenspielen gibt Ausdauer die &quot;Lebenspunkte&quot; eines Charakters an und bestimmt, wie viele Treffer diese im Kampf einstecken können, bevor sie kampfunfähig werden. Anders als üblich ist sie jedoch nicht bloß gleichzusetzen mit der körperlichen Unversehrtheit, sondern ist stattdessen als abstrakte Mischung verschiedener Modifikatoren zu verstehen:
 
 *die Willenskraft zum Kampf,
@@ -14638,7 +14640,7 @@ Anders als die meistens NPCs sind Spielercharaktere nicht gleich besiegt, wenn i
 Nach Ermessen des Spielleiters steht diese Möglichkeit auch bestimmten NPCs offen. Alternativ müssen besiegte NPCs nicht zwangsläufig tot sein, wenn dies narrativ nicht sinnvoll wäre.
 
 !! Erforderliche Rettungswürfe:
-Der Charakter muss insgesamt ''3 //Widerstands-Rettungswürfe//'' bestehen, um wiederaufzustehen, oder aber eine ''20'' werfen. Das Ergebnis jeden Wurfes wird mit dem Konstitutionswert und der //Widerstandsfähigkeit// modifiziert. Wenn der Charakter stattdessen eine ''1'' wirft oder bei ''3'' Rettungswürfen versagt, wird dieser besiegt und kann ohne speziellen Zauber, Talente, usw., nicht mehr am Kampf teilnehmen.
+Der Charakter muss insgesamt ''3 //Widerstands-Rettungswürfe// bestehen'', um wiederaufzustehen, oder aber eine ''20 werfen''. Das Ergebnis jeden Wurfes wird mit dem Konstitutionswert und der //Widerstandsfähigkeit// modifiziert. Wenn der Charakter stattdessen eine ''1 wirft'' oder bei ''3 //Rettungswürfen// versagt'', wird dieser besiegt und kann ohne speziellen Zauber, Talente, usw., nicht mehr am Kampf teilnehmen.
 
 &lt;div style=&quot;width:90%;margin:auto;&quot;&gt;
 
@@ -14792,6 +14794,31 @@ Wissen ist eine gesondert aufgelistete Fähigkeit und fällt unter das Attribut 
 ''Religion'':
 
 &lt;/div&gt;</pre>
+</div>
+<div created="20220715182809071" creator="Keks" modified="20220715183310099" modifier="Keks" title="Rast">
+<pre>Nach einem kräftezehrenden Kampf, am Ende eines langen Tages, oder vor einer großen Schlacht, können Charaktere sich nach Belieben dazu entscheiden zu rasten, um so ihre [[Ausdauer]] zu regenerieren, von unliebsamen [[Statusveränderungen|Statuseffekte]] befreit zu werden, oder ihre Zauberplätze wieder aufzufüllen. Ein Charakter, der nicht mindestens ''1 Ausdauerpunkt'' übrig hat, kann nicht rasten und muss zuerst gerettet werden.
+
+Rasten gibt es in zwei Varianten:
+
+!!Kurze Rast
+Eie Kurze Rast ist eine kleinere Verschnaufpause von etwa einer Stunde Dauer, die Charaktere nutzen können, um Verpflegung zu sich zu nehmen, leichte Wunden zu versorgen, oder andere einfache Aufgaben zu verrichten, die keine Anstregung erfordern.
+
+Am Ende der Kurzen Rast regneriert der Charakter ''2d6 + Konstitutions-Modifikator'' Ausdauerpunkte.
+
+Ein Charakter kann nur zwei mal pro Tag eine Kurze Rast einlegen, um so Ausdauer zurückzugewinnen.
+
+!! Lange Rast
+Die Lange Rast ist eine Zeitspanne von ungefähr 8 Stunden und fällt üblicherweise auf die Nachtstunden, welche die meisten Charaktere mit Schlaf verbringen, kann bei Bedarf aber auch zu jeder anderen Tageszeit stattfinden, um sich beispielsweise auf einen großen Kampf vorzubereiten. In diesem Fall können Charaktere statt zu schlafen auch meditieren, essen, plaudern, oder anderen leichten Aktivitäten nachgehen.
+
+Eine unterbrochene Lange Rast (etwa durch einen Überfall) muss innerhalb einer Stunde wieder fortgesetzt werden, ansonsten verfallen die Effekte der Rast und sie muss neu begonnen werden.
+
+Am Ende einer Langen Rast wird die Ausdauer eines Charakters vollständig wiederhergestellt, seine Zauberplätze aufgefüllt, und sämtliche Statusveränderungen - magische und anderweitig - werden entfernt, sofern diese keiner Heilung bedürfen. Charaktere können die positiven Effekte einer Langen Rast nur ein mal alle 24 Stunden genießen, dürfen aber natürlich soviel Zeit mit Rumtrödeln verschwenden, wie sie wollen.
+
+! Schlaf
+Charaktere die Schlaf benötigen, können ruhen, wann immer es passt; am ehesten bietet sich aber natürlich die Lange Rast an.
+Wer ''24 Stunden'' lang ohne Schlaf auf den Beinen war verliert temporär ''1 //maximalen Ausdauerpunkt//''. Dieser wird wiederhergestellt, sobald der Charakter seinen Schlaf nachholen konnte.
+Nach ''48 Stunden'' ohne Schlaf sinkt die maximale Ausdauer um weitere ''2 Punkte'', nach ''72 Stunden'' um zusätzliche ''3'', etc.
+Wer fünf Tage lang also kein Auge zutun kann, der büßt 15 Punkte maximaler Ausdauer ein. </pre>
 </div>
 <div created="20220714203025967" creator="Keks" modified="20220715180840928" modifier="Keks" tags="" title="Regelwerk">
 <pre>&lt;style&gt;

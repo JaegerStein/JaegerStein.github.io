@@ -297,6 +297,8 @@ Error message and password prompt
 
 <li>Attribute</li>
 
+<li>Ausdauer</li>
+
 <li>Eigenschaften</li>
 
 <li>Fähigkeiten</li>
@@ -10372,8 +10374,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220715180857127" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>added Talente and Eigenschaften</pre>
+<div created="20210715231539247" creator="Keks" modified="20220715182559738" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>added Ausdauer</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14416,7 +14418,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220715172419565" creator="Keks" list="$:/STRG+UMSCHALT+R Regelwerk $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220715175536126" modifier="Keks" title="$:/StoryList">
+<div created="20220715172419565" creator="Keks" list="$:/STRG+UMSCHALT+R Regelwerk $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220715182317617" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14609,6 +14611,57 @@ Weisheit gibt das allgemeine Wissen eines Charakters über diverse Fähigkeiten 
 Charisma misst die Überzeugungskraft, Eloquenz und Führungsstärke eines Charakters. Charisma verändert nicht die körperliche Attraktivität, sehr wohl jedoch die Fähigkeit mit Worten zu betören.
 
 &lt;/div&gt;</pre>
+</div>
+<div created="20220715180935572" creator="Keks" modified="20220715182504007" modifier="Keks" title="Ausdauer">
+<pre>Analog zu klassischen Rollenspielen gibt Ausdauer die &quot;Lebenspunkte&quot; eines Charakters an und bestimmt, wie viele Treffer diese im Kampf einstecken können, bevor sie kampfunfähig werden. Anders als üblich ist sie jedoch nicht bloß gleichzusetzen mit der körperlichen Unversehrtheit, sondern ist stattdessen als abstrakte Mischung verschiedener Modifikatoren zu verstehen:
+
+*die Willenskraft zum Kampf,
+*die verbleibende Konstitution, bevor einem die Puste ausgeht,
+*Wunden, Schmerzen, generelles Unbehagen aus wahllosen Quellen,
+*im kosmischen Sinne das verbleibende Glück eines Charakters, um schwere Verwundungen zu verhindern.
+
+Dementsprechend kann Ausdauer über verschiedene Wege gesenkt werden. Mentaler Schaden, etwa durch Zauber oder andere Talente hervorgerufen, reduziert genauso die Ausdauer eines Gegners wie der Schlag mit einem Schwert.
+
+&lt;div style=&quot;width:90%;margin:auto;&quot;&gt;
+
+//Optional:&lt;br&gt;Immer, wenn ein Charakter Ausdauer verliert, kann er im Ermessen des Spielleiters eine [[Verletzung|Verletzungen]] davontragen, die temporär oder permanent die maximale Ausdauer senken kann.//
+
+&lt;/div&gt;
+
+! Kampfunfähigkeit
+
+Sobald die Ausdauer eines Charakters auf ''0'' sinkt, können abhängig vom Kontext mehrere Dinge geschehen.
+Bei NPCs bedeutet dies für gewöhnlich, dass sie besiegt sind und sterben, nachdem sie eine tödliche Verwundung davongetragen haben. Bei einer Tavernenschlägerei jedoch kann 0 Ausdauer heißen, dass der Kontrahent lediglich Ohnmächtig zu Boden geht und somit den Kampf verliert; Beim Übungskampf kann 0 Ausdauer bedeuten, dass man die eigene Waffe verliert und zu Boden geht, jedoch nach wie vor bei Sinnen ist.
+Trägt ein Gegner mentalen Schaden davon, der seine Ausdauer auf 0 senkt, kann der Spielleiter beispielsweise entscheiden, dass dieser statt zu sterben den Verstand verliert oder aus dem Kampf flieht (Gegner können auch gerne vorher fliehen, bevor es völlig aussichtslos für sie wirkt.)
+
+Anders als die meistens NPCs sind Spielercharaktere nicht gleich besiegt, wenn ihre Ausdauer auf 0 fällt. Diese können sich stattdessen sammeln und bei gelungenem [[Widerstands-Rettungswurf|Rettungswürfe]] mit verminderter Ausdauer wieder am Kampf teilzunehmen, oder wenigstens die Option erhalten, sich in Sicherheit zu bringen. Üblicherweise stehen Charaktere mit nur ''1'' Ausdauerpunkt wieder auf; dieser Wert kann über [[Talente]], [[Eigenschaften]] und die [[Fähigkeit Widerstand|Fähigkeiten]] verbessert werden.
+Nach Ermessen des Spielleiters steht diese Möglichkeit auch bestimmten NPCs offen. Alternativ müssen besiegte NPCs nicht zwangsläufig tot sein, wenn dies narrativ nicht sinnvoll wäre.
+
+!! Erforderliche Rettungswürfe:
+Der Charakter muss insgesamt ''3 //Widerstands-Rettungswürfe//'' bestehen, um wiederaufzustehen, oder aber eine ''20'' werfen. Das Ergebnis jeden Wurfes wird mit dem Konstitutionswert und der //Widerstandsfähigkeit// modifiziert. Wenn der Charakter stattdessen eine ''1'' wirft oder bei ''3'' Rettungswürfen versagt, wird dieser besiegt und kann ohne speziellen Zauber, Talente, usw., nicht mehr am Kampf teilnehmen.
+
+&lt;div style=&quot;width:90%;margin:auto;&quot;&gt;
+
+//Sonderregel:&lt;br&gt;Wenn ein Charakter in einer Runde Schaden in Höhe seiner gesamten Ausdauer erhält, ist er direkt besiegt und erhält keine Gelgenheit, sich zu retten. Ob er dann direkt Matsch ist oder was anderes passiert, darf der Spielleiter entscheiden.//
+
+&lt;/div&gt;
+
+! Ausdauerpunkte
+
+Die Ausdauer eines Charakters errechnet sich anhand der Formel
+
+```
+Basiswert + Konstitutionsmodifikator x (0,1 x Basiswert)
+```
+
+Dabei wird immer abgeegrundet. Der Basiswert ist die Standardausdauer eines Charakters, die vom Spielleiter festgelegt wird. Für die allermeisten Spielercharaktere ist dieser Wert ''20''.
+
+Für Dumme:
+//Bei einer Konstitution von ''10'' ist die Ausdauer immer gleich dem Basiswert; bei einem Basiswert von ''20'' steigt die Ausdauer um ''2'' Punkte je Konstitutionswert. Wenn du ein Mensch bist und ''13'' Konstitution hast, ist deine Ausdauer ''26''.//
+
+Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der Körpergröße angibt:
+
+[img[asset\img\health.png]]</pre>
 </div>
 <div created="20220715175423468" creator="Keks" modified="20220715180718828" modifier="Keks" title="Eigenschaften">
 <pre>Eigenschaften sind spezielle Statuswerte eines Charakters, die entweder wahr oder falsch sind und im Normalfall nicht gesteigert werden können. Eigenschaften sind zumeist rein passiv, müssen also nicht explizit angewendet werden, womit sie sich von den [[Talenten|Talente]] unterscheiden.&lt;br&gt;

@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Sculéru Regelwerk — v0.0.1 | 1. Edition</title>
+<title>Sculéru Regelwerk — v0.0.2 | 1. Edition</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -312,6 +312,8 @@ Error message and password prompt
 <li>Talente</li>
 
 <li>Übersicht</li>
+
+<li>Verletzungen</li>
 
 </ul>
 </p>
@@ -10380,8 +10382,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220716210310444" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>added Grundregeln</pre>
+<div created="20210715231539247" creator="Keks" modified="20220716214237157" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>added Verletzungen</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14310,8 +14312,8 @@ exports.create = function(wiki) {
 <div created="20210704204737730" modified="20210704210608055" title="$:/palette">
 <pre>$:/palettes/Nord</pre>
 </div>
-<div created="20210704211256991" creator="Keks" modified="20220715163102234" modifier="Keks" title="$:/SiteSubtitle">
-<pre>v0.0.1 | 1. Edition</pre>
+<div created="20210704211256991" creator="Keks" modified="20220716214253319" modifier="Keks" title="$:/SiteSubtitle">
+<pre>v0.0.2 | 1. Edition</pre>
 </div>
 <div created="20210704210759007" creator="Keks" modified="20220715162935792" modifier="Keks" title="$:/SiteTitle">
 <pre>Sculéru Regelwerk</pre>
@@ -14424,7 +14426,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220716202334055" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht Grundregeln $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220716210156683" modifier="Keks" title="$:/StoryList">
+<div created="20220716202334055" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220716214244257" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14890,6 +14892,29 @@ h2{padding:0;margin:0;}
 
     &lt;/div&gt;
 &lt;/div&gt;</pre>
+</div>
+<div created="20220716210330856" creator="Keks" modified="20220716214227604" modifier="Keks" title="Verletzungen">
+<pre>! //Vorschlag//
+
+&lt;hr&gt;
+
+Verletzungen senken temporär oder permanent die maximale [[Ausdauer]] und kommen in drei Kategorien:
+
+* ''Leichte Verletzungen'' senken die maximale Ausdauer um //''-1''// und heilen von selbst, auch wenn sie nicht behandelt werden.
+* ''Mittlere Verletzungen'' senken die maximale Ausdauer um ''//-2//'', ''//-3//'' oder ''//-4//'' und können sich abhängig vom [[Widerstandswurf|Fähigkeiten]] von selbst verbessern oder schlimmer werden, wenn sie nicht behandelt werden.
+* ''Schwere Verletzungen'' senken die maximale Ausdauer um ''//-5//'' oder mehr und werden unbehandelt immer schlimmer.
+
+Charaktere können im [[Kampf]] und auch abseits im Ermessen des Spielleiters Verletzungen davontragen, was ihnen abhängig von der Art der Verletzung einen Malus oder [[Nachteil|Vorteil &amp; Nachteil]] auf bestimmte Würfe geben kann (WIP), zumeist aber nur die maximale Ausdauer senkt.
+
+Verletzungen können sich um 1 Punkt pro [[Langer Rast|Rast]] verbessern, bis sie geheilt sind. Je Kategorie können gleichzeitig eine Anzahl von Verletzungen in Höhe des Widerstandsbonus+1 heilen.
+
+''Leichte Verletzungen'' heilen immer automatisch.&lt;br&gt;
+''Mittlere Verletzungen'' beginnen immer bei ''//-3//''; sollten sie nicht behandelt werden, muss der Charakter bei der nächsten Langen Rast einen //[[SG10|Schwierigkeitsgrade]]// Wiederstandswurf bestehen. Sollte dieser bestanden werden sinkt die Verletzung auf -2 und der Schwierigkeitsgrad sinkt beim nächsten Mal auf //5//. Sollte der Charakter versagen steigt die Verletzung auf ''//-4//'', der Schwierigkeitsgrad steigt auf //15//.&lt;br&gt;
+''Schwere Verletzung'' beginnen bei ''//-5//'' und werden unbehandelt bei jeder Langen Rast um ''//-1//'' schlimmer.
+
+Das klingt verwirrend, also ein Beispiel:
+
+//Ein Charakter hat 1 schwere, 2 mittlere und 3 leichte Verletzungen, die noch nicht behandelt wurden, eine Konstitution von 10 und einen Widerstandswert von +1. Seine maximale Ausdauer ist derzeit um -17 (-5-3-3-1-1-1) reduziert. Bei der nächsten Langen Rast wirft der Charakter zwei Mal auf Konstitution und rechnet den Wiederstandbonus drauf. Er erhält als Endergebnis eine 9 und eine 11, d.h. eine der mittleren Verletzungen wird besser und sinkt auf -2, die andere verschlimmert sich und steigt auf -4. 2 der leichten Verletzungen heilen von selbst, die schwere Verletzung sinkt auf -6. Die maximale Ausdauer ist jetzt nur noch um -13 (-6-4-2-1) reduziert. Vor der nächsten Langen Rast wird der Charakter erfolgreich von einem Gruppenmitglied behandelt (was ist der SG, 13?), seine Verletzungen heilen also fortan von selbst. Nach einer langen Rast ist die letzte leichte Verletzung verschwunden, eine mittlere wurde stattdessen zu leichten. Die maximale Ausdauer ist jetzt um -9 (-5-3-1) reduziert. Nach 5 weiteren Rasten ist der Charakter vollständig genesen.//</pre>
 </div>
 
 

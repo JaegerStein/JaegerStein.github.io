@@ -303,6 +303,8 @@ Error message and password prompt
 
 <li>Fähigkeiten</li>
 
+<li>Grundregeln</li>
+
 <li>Rast</li>
 
 <li>Statuseffekte</li>
@@ -10378,8 +10380,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220716205641566" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>Statuseffekte quicksave</pre>
+<div created="20210715231539247" creator="Keks" modified="20220716210310444" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>added Grundregeln</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14422,7 +14424,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220716202334055" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht Statuseffekte $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220716204440952" modifier="Keks" title="$:/StoryList">
+<div created="20220716202334055" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht Grundregeln $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220716210156683" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14797,6 +14799,16 @@ Wissen ist eine gesondert aufgelistete Fähigkeit und fällt unter das Attribut 
 
 &lt;/div&gt;</pre>
 </div>
+<div created="20220716210200989" creator="Keks" modified="20220716210259989" modifier="Keks" title="Grundregeln">
+<pre>*[[Attribute]]
+*[[Fähigkeiten]]
+*[[Talente]]
+*[[Eigenschaften]]
+*[[Ausdauer]]
+*[[Rast]]
+*[[Statuseffekte]]
+*[[Verletzungen]]</pre>
+</div>
 <div created="20220715182809071" creator="Keks" modified="20220715183310099" modifier="Keks" title="Rast">
 <pre>Nach einem kräftezehrenden Kampf, am Ende eines langen Tages, oder vor einer großen Schlacht, können Charaktere sich nach Belieben dazu entscheiden zu rasten, um so ihre [[Ausdauer]] zu regenerieren, von unliebsamen [[Statusveränderungen|Statuseffekte]] befreit zu werden, oder ihre Zauberplätze wieder aufzufüllen. Ein Charakter, der nicht mindestens ''1 Ausdauerpunkt'' übrig hat, kann nicht rasten und muss zuerst gerettet werden.
 
@@ -14822,7 +14834,7 @@ Wer ''24 Stunden'' lang ohne Schlaf auf den Beinen war verliert temporär ''1 //
 Nach ''48 Stunden'' ohne Schlaf sinkt die maximale Ausdauer um weitere ''2 Punkte'', nach ''72 Stunden'' um zusätzliche ''3'', etc.
 Wer fünf Tage lang also kein Auge zutun kann, der büßt 15 Punkte maximaler Ausdauer ein. </pre>
 </div>
-<div created="20220716203305780" creator="Keks" modified="20220716205630265" modifier="Keks" title="Statuseffekte">
+<div created="20220716203305780" creator="Keks" modified="20220716210139293" modifier="Keks" title="Statuseffekte">
 <pre>Statuseffekte (oder Zustand) verändern die Fähigkeiten einer Kreatur auf unterschiedliche Weise und können durch [[Zauber|Magie]], [[Talente]], [[Eigenschaften]], bestimmte Attacken oder andere Effekte entstehen. Die meisten Statuseffekte, wie z.B. //blind//, sind Beeinträchtigungen, aber einige wenige, wie z.B. //unsichtbar//, können von Vorteil sein.
 
 Ein Zustand hält entweder so lange an, bis er aufgehoben wird (der Statuseffekt //liegend// wird beispielsweise durch Aufstehen aufgehoben) oder für die festgelegte Dauer des Effektes. Abhängig vom Zustand kann diese Dauer auch unbegrenzt sein und dieser muss somit aktiv aufgehoben werden.
@@ -14836,7 +14848,7 @@ Die folgenden Definitionen geben an, was mit einer Kreatur geschieht, während s
 &lt;div style=&quot;width:90%;margin:auto;&quot;&gt;
 
 !! Blind
-Die Kreatur verliert die Fähigkeit zu Sehen und versagt automatisch bei jedem [[Wahrnehmungswurf|Attribute]], der Sicht erfordert.&lt;br&gt;
+Die Kreatur verliert die Fähigkeit zu sehen und versagt automatisch bei jedem [[Wahrnehmungswurf|Attribute]], der Sicht erfordert.&lt;br&gt;
 Die Kreatur hat zudem [[Nachteil|Vorteil &amp; Nachteil]] im [[Kampf]], während Gegner im Kampf gegen diese Kreatur Vorteil haben. Der [[Schwierigkeitsgrad|Schwierigkeitsgrade]] für [[Fernkampfangriffe|Fernkampf]] steigt zudem um ''//+10//''.
 
 !! Betört
@@ -14844,7 +14856,12 @@ Die Kreatur ist von einer anderen Kreatur betört und kann diese nicht angreifen
 Die andere Kreatur hat zudem Vorteil auf alle Charismawürfe gegen die betörte Kreatur.
 
 !! Taub
+Die Kreatur verliert die Fähigkeit zu hören und versagt automatisch bei Wahrnehmungswürfen, die das Gehör erfordern.
 
+!! Erschöpft
+//Siehe auch ''Schlaf'' unter [[Rast]], WIP//
+
+!! Bin Faul, will nicht mehr
 &lt;/div&gt;</pre>
 </div>
 <div created="20220715175543209" creator="Keks" modified="20220715180717180" modifier="Keks" title="Talente">

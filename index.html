@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Sculéru Regelwerk — v0.0.2 | 1. Edition</title>
+<title>Sculéru Regelwerk — v0.0.3 | 1. Edition</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -305,11 +305,11 @@ Error message and password prompt
 
 <li>Fähigkeiten</li>
 
-<li>Grundregeln</li>
+<li>Grundlagen</li>
+
+<li>Grundregelwerk</li>
 
 <li>Rast</li>
-
-<li>Schnellreferenz</li>
 
 <li>Statuseffekte</li>
 
@@ -10386,8 +10386,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220717212301435" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>added Allgemeine Begriffe</pre>
+<div created="20210715231539247" creator="Keks" modified="20220718203444792" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>updated Grundlagen/Grundregelwerk</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14316,8 +14316,8 @@ exports.create = function(wiki) {
 <div created="20210704204737730" modified="20210704210608055" title="$:/palette">
 <pre>$:/palettes/Nord</pre>
 </div>
-<div created="20210704211256991" creator="Keks" modified="20220716214253319" modifier="Keks" title="$:/SiteSubtitle">
-<pre>v0.0.2 | 1. Edition</pre>
+<div created="20210704211256991" creator="Keks" modified="20220718203419699" modifier="Keks" title="$:/SiteSubtitle">
+<pre>v0.0.3 | 1. Edition</pre>
 </div>
 <div created="20210704210759007" creator="Keks" modified="20220715162935792" modifier="Keks" title="$:/SiteTitle">
 <pre>Sculéru Regelwerk</pre>
@@ -14391,10 +14391,10 @@ exports.create = function(wiki) {
 <div created="20210929132141580" creator="Keks" modified="20210929132142399" modifier="Keks" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Languages</pre>
 </div>
-<div created="20210704204549924" creator="Keks" modified="20220717110906677" modifier="Keks" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Saving</pre>
+<div created="20210704204549924" creator="Keks" modified="20220718203416398" modifier="Keks" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20210704205808925" creator="Keks" modified="20210715165252104" modifier="Keks" title="$:/state/tab-2065006209">
+<div created="20210704205808925" creator="Keks" modified="20220718203414550" modifier="Keks" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div created="20210707170241069" creator="Keks" modified="20220714202850784" modifier="Keks" title="$:/state/tab/moresidebar-1850697562">
@@ -14430,7 +14430,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220717205936480" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220717211045577" modifier="Keks" title="$:/StoryList">
+<div created="20220718194625280" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220718203404590" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14569,17 +14569,46 @@ exports.create = function(wiki) {
 <div created="20210704205837003" modified="20210704205839283" title="$:/view">
 <pre>classic</pre>
 </div>
-<div created="20220717211110007" creator="Keks" modified="20220717212246618" modifier="Keks" title="Allgemeine Begriffe">
+<div created="20220717211110007" creator="Keks" modified="20220718202605369" modifier="Keks" title="Allgemeine Begriffe">
 <pre>''[[Aktion|Aktionen]]'': Eine Aktion ist eine bestimmte Zeiteinheit in einer Kampfrunde. Charaktere müssen Aktionen ausführen, um ihre [[Talente]] einzusetzen, [[Zauber|Magie]] zu wirken oder [[anzugreifen|Angriffe]]. Es gibt verschiedene Arten von Aktionen: Standard-Aktionen, Bewegungsaktionen, Bonusakttionen, freie Aktionen und volle Aktionen.
 
 ''[[Attribut|Attribute]]'': Jede Kreatur hat acht Attributswerte: Stärke, Athletik, Geschicklichkeit, Konstitution, Wahrnehmung, Intelligenz, Weisheit und Charisma. Diese Werte repräsentieren die grundlegenden Befähigungen der Kreatur. Je höher ein Wert, desto mehr Potential und Begabung besitzt der Charakter in einem bestimmten Bereich.
 
-Bonus: Boni sind Zahlenwerte, die auf entsprechende Würfe addiert werden und deren Ergebnisse verbessern.
+''Bonus/Malus'': Boni sind Zahlenwerte, die auf entsprechende Würfe addiert werden und deren Ergebnisse verbessern. Mali subtrahieren von Würfen und verschlechtern das Ergebnis.
 
-''[[Fähigkeit|Fähigkeiten]]'':
+''[[Eigenschaft|Eigenschaften]]'':
 
+''[[Fähigkeit|Fähigkeiten]]'': Fähigkeiten sind häufig gebrauchte Befähigungen eines Charakters, die in passenden Fällen Attributswürfe verbessern können und so bei der Bewältigung vieler Hindernisse helfen.
 
-</pre>
+''Gesinnung'': Fragwürdig, ob wir sowas haben wollen. Am ehesten würde es Spieler eine eindeutige Richtung vorgeben, anhand derer sie das Rollenspielverhalten ihres Charakters ausrichten können. Von tiefergreifenden, mechanischen Einlüssen durch die Gesinnung halte ich nicht viel.
+
+''[[Initiative]]'': Die Initiative bestimmt die Kampfreihenfolge der Kämpfer und wird über einen Athletik-Wurf zu Kampfbeginn bestimmt.
+
+''[[Konzentration]]'': Wenn eine Kreatur bei einem Zauber gestört wird, der Konzentration erfordert, oder etwa durch eine [[Reaktion|Reaktionen]] beim Zaubern behindert wird, muss dieser einen Konzentrationswurf mit dem für den Zauber benutzten Attribut bestehen.
+
+''Kreatur'': Eine Kreatur ist jedes Wesen, dass die Welt um sich herum aktiv beeinflussen kann.
+
+''[[Resistenz|Resistenzen]]'':
+
+''[[Rettungswurf|Rettungswürfe]]'':
+
+''[[Rüstung]]'':
+
+''[[Runde|Runden]]'':
+
+''[[Schwierigkeitsgrad|Schwierigkeitsgrade]] (SG)'': Immer wenn eine Kreatur eine Aktion ausführen will, deren Erfolg nicht garantiert ist, muss sie einen Wurf bestehen (meist ein Fähigkeitenwurf). Das Ergebnis dieses Wurfs muss mindestens so hoch wie der angegebene Schwierigkeitsgrad sein, damit die Handlung erfolgreich ist.
+
+''[[Talent|Talente]]'':
+
+''[[Ausdauer]]'':
+
+''[[Wurf|Würfe]]'':
+
+''[[Zauber|Zauber]]'':
+
+''[[Zauberstufe|Zauberstufen]]'':
+
+''[[Zug|Züge]]'':</pre>
 </div>
 <div created="20220714203939773" creator="Keks" modified="20220715183909385" modifier="Keks" title="Attribute">
 <pre>Jeder Charakter besitzt ''8 Attribute'', die dessen körperlichen und geistigen Fähigkeiten beschreiben. Jedes Attribut kann einen Wert von ''1'' bis ''20'' annehmen und abhängig davon das Ergebnis betroffener Würfe verschlechtern oder verbessern. Der Standardwert eines jeden Attributs ist ''10'' und gibt keine Boni auf Würfe.
@@ -14817,13 +14846,23 @@ Wissen ist eine gesondert aufgelistete Fähigkeit und fällt unter das Attribut 
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20220716210200989" creator="Keks" modified="20220717211051812" modifier="Keks" title="Grundregeln">
-<pre>*[[Schnellreferenz]]
+<div created="20220717211037417" creator="Keks" modified="20220718203035662" modifier="Keks" title="Grundlagen">
+<pre>*[[Allgemeine Begriffe]]
+*[[Charaktererstellung]]
 *[[Attribute]]
 *[[Fähigkeiten]]
-*[[Talente]]
 *[[Eigenschaften]]
-*[[Ausdauer]]
+*[[Talente]]
+*[[Ausdauer]]</pre>
+</div>
+<div created="20220716210200989" creator="Keks" modified="20220718203350160" modifier="Keks" title="Grundregelwerk">
+<pre>*[[Grundlagen]]
+*[[Völker]]
+*[[Ausrüstung]]
+*[[Kampf]]
+*[[Magie]]
+&lt;hr&gt;
+
 *[[Rast]]
 *[[Statuseffekte]]
 *[[Verletzungen]]</pre>
@@ -14852,9 +14891,6 @@ Charaktere die Schlaf benötigen, können ruhen, wann immer es passt; am ehesten
 Wer ''24 Stunden'' lang ohne Schlaf auf den Beinen war verliert temporär ''1 //maximalen Ausdauerpunkt//''. Dieser wird wiederhergestellt, sobald der Charakter seinen Schlaf nachholen konnte.
 Nach ''48 Stunden'' ohne Schlaf sinkt die maximale Ausdauer um weitere ''2 Punkte'', nach ''72 Stunden'' um zusätzliche ''3'', etc.
 Wer fünf Tage lang also kein Auge zutun kann, der büßt 15 Punkte maximaler Ausdauer ein. </pre>
-</div>
-<div created="20220717211037417" creator="Keks" modified="20220717211048598" modifier="Keks" title="Schnellreferenz">
-<pre>*[[Allgemeine Begriffe]]</pre>
 </div>
 <div created="20220716203305780" creator="Keks" modified="20220716210139293" modifier="Keks" title="Statuseffekte">
 <pre>Statuseffekte (oder Zustand) verändern die Fähigkeiten einer Kreatur auf unterschiedliche Weise und können durch [[Zauber|Magie]], [[Talente]], [[Eigenschaften]], bestimmte Attacken oder andere Effekte entstehen. Die meisten Statuseffekte, wie z.B. //blind//, sind Beeinträchtigungen, aber einige wenige, wie z.B. //unsichtbar//, können von Vorteil sein.
@@ -14890,7 +14926,7 @@ Die Kreatur verliert die Fähigkeit zu hören und versagt automatisch bei Wahrne
 <pre>Talente sind besondere Fähigkeiten, die das Repertoire an verfügbaren Aktionen eines Charakters im Kampf und auch außerhalb beträchtlich erweitern können. Talente müssen zumeist aktiv eingesetzt werden.&lt;br&gt;
 Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollständige Liste anzufertigen. Jeder Spieler kann nach eigenem Ermessen Talente und deren Effekte für seinen Charakter entwerfen, diese müssen aber vom Spielleiter zugelassen werden.</pre>
 </div>
-<div created="20220714203025967" creator="Keks" modified="20220716203053806" modifier="Keks" tags="" title="Übersicht">
+<div created="20220714203025967" creator="Keks" modified="20220718202812154" modifier="Keks" tags="" title="Übersicht">
 <pre>&lt;style&gt;
 h2{padding:0;margin:0;}
 &lt;/style&gt;
@@ -14900,7 +14936,7 @@ h2{padding:0;margin:0;}
 
 !! Regeln:
 
-*[[Grundregeln]]
+*[[Grundregelwerk]]
 
     &lt;/div&gt;
 

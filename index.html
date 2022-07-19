@@ -301,13 +301,19 @@ Error message and password prompt
 
 <li>Ausdauer</li>
 
+<li>Charaktererstellung</li>
+
 <li>Eigenschaften</li>
 
 <li>Fähigkeiten</li>
 
+<li>Fernkampf</li>
+
 <li>Grundlagen</li>
 
 <li>Grundregelwerk</li>
+
+<li>Kampf</li>
 
 <li>Rast</li>
 
@@ -10386,8 +10392,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220718203444792" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>updated Grundlagen/Grundregelwerk</pre>
+<div created="20210715231539247" creator="Keks" modified="20220719221713802" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>added Fernkampf</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14430,7 +14436,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220718194625280" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220718203404590" modifier="Keks" title="$:/StoryList">
+<div created="20220719213252696" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220719221017117" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14716,6 +14722,11 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 
 [img[asset\img\health.png]]</pre>
 </div>
+<div created="20220719213339922" creator="Keks" modified="20220719213444613" modifier="Keks" title="Charaktererstellung">
+<pre>*[[Professionen]]
+*[[Persönlichkeit &amp; Hintergrund]]
+*[[Inventar]]</pre>
+</div>
 <div created="20220715175423468" creator="Keks" modified="20220715180718828" modifier="Keks" title="Eigenschaften">
 <pre>Eigenschaften sind spezielle Statuswerte eines Charakters, die entweder wahr oder falsch sind und im Normalfall nicht gesteigert werden können. Eigenschaften sind zumeist rein passiv, müssen also nicht explizit angewendet werden, womit sie sich von den [[Talenten|Talente]] unterscheiden.&lt;br&gt;
 Eingeschaften können alles mögliche sein und sind somit zu zahlreich, um eine vollständige Liste anzufertigen. Jeder Spieler kann nach eigenem Ermessen Eigenschaften und deren Effekte für seinen Charakter entwerfen, diese müssen aber vom Spielleiter zugelassen werden.
@@ -14846,6 +14857,30 @@ Wissen ist eine gesondert aufgelistete Fähigkeit und fällt unter das Attribut 
 
 &lt;/div&gt;</pre>
 </div>
+<div created="20220719213559273" creator="Keks" modified="20220719221648061" modifier="Keks" title="Fernkampf">
+<pre>Fernkampf nutzt als [[Attribut|Attribute]] GES für Geschosswaffen (Bögen, Armbrüste, etc.) oder ATH für Wurfwaffen (Speere, Messer, Äxte, etc.). Der [[Schadenstyp|Schadenstypen]] ist unabhängig davon und basiert auf der Art des Geschosses: Pfeile, Bolzen, etc. verursachen GES-Schaden; Wurfäxte, Shuriken, etc. verursachen ATH-Schaden; Steine, Metallkugeln, etc. verursachen STÄ-Schaden.
+
+Um eine [[Kreatur|Kreaturen]] zu treffen, muss der Schütze einen [[unverteidigten|Verteidigung]] [[Angriffswurf|Angriff]] mit vorgegebenem [[Schwierigkeitsgrad|Schwierigkeitsgrade]] bestehen. Dieser Grad wird vom [[Spielleiter]] vorgegeben und hängt von der Situation ab, etwa der Entfernung zum Ziel, dessen vorangegangener Bewegung, [[Eigenschaften]] und [[Talenten]], und mehr. Üblicherweise beträgt der SG 10.
+
+Wenn das Ergebnis des Angriffswurfes ''über'' dem Schwierigkeitsgrad liegt, hat der Schütze die Chance, Schaden zu verursachen. Dazu wirft er einen Würfel, dessen Seitenanzahl der Differenz des Wurfes zum Schwierigkeitsgrad entspricht. Das Ergebnis ist der verursachte Schaden.
+
+//(In Discord ist das kein Problem, der Bot kann jede Seitenzahl. Wenn man das in die echte Welt übertragen wollen würde, wie könnte man das am besten mit existierenden Standarwürfeln schaffen? 4-6-8-10-12-20)//
+
+Ein Beispiel:
+
+//Der SG ist 20. Der Schütze wirft eine 21 (mit Boni). Der Schuss macht 1 Schaden.&lt;br&gt;
+Der SG ist 15. Der Schütze wirft eine 15 macht keinen Schaden; der Pfeil prallt wirkungslos ab.&lt;br&gt;
+Der SG ist 10. Der Schütze wirft eine 35. Der Schuss macht 1W25 Schaden.//
+
+&lt;hr&gt;
+
+Schwierigkeitsgrade abhängig von der [[Entfernung|Maßeinheiten]] (Beispiel)
+
+|!SG|!Entfernung|
+|10|bis 30 Fuß|
+|15|bis 60 Fuß|
+|20|bis 120 Fuß|</pre>
+</div>
 <div created="20220717211037417" creator="Keks" modified="20220718203035662" modifier="Keks" title="Grundlagen">
 <pre>*[[Allgemeine Begriffe]]
 *[[Charaktererstellung]]
@@ -14866,6 +14901,10 @@ Wissen ist eine gesondert aufgelistete Fähigkeit und fällt unter das Attribut 
 *[[Rast]]
 *[[Statuseffekte]]
 *[[Verletzungen]]</pre>
+</div>
+<div created="20220719213457998" creator="Keks" modified="20220719213526917" modifier="Keks" title="Kampf">
+<pre>*[[Nahkampf]]
+*[[Fernkampf]]</pre>
 </div>
 <div created="20220715182809071" creator="Keks" modified="20220715183310099" modifier="Keks" title="Rast">
 <pre>Nach einem kräftezehrenden Kampf, am Ende eines langen Tages, oder vor einer großen Schlacht, können Charaktere sich nach Belieben dazu entscheiden zu rasten, um so ihre [[Ausdauer]] zu regenerieren, von unliebsamen [[Statusveränderungen|Statuseffekte]] befreit zu werden, oder ihre Zauberplätze wieder aufzufüllen. Ein Charakter, der nicht mindestens ''1 Ausdauerpunkt'' übrig hat, kann nicht rasten und muss zuerst gerettet werden.

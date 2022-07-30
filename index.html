@@ -14438,7 +14438,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div list="Attribute Statuseffekte $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" title="$:/StoryList">
+<div created="20220730174731894" creator="Keks" list="Attribute $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220730174731894" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14618,7 +14618,7 @@ exports.create = function(wiki) {
 
 ''[[Zug|Züge]]'':</pre>
 </div>
-<div created="20220714203939773" creator="Keks" modified="20220730154125483" modifier="Keks" title="Attribute">
+<div created="20220714203939773" creator="Keks" modified="20220730183457725" modifier="Keks" title="Attribute">
 <pre>Jeder Charakter besitzt ''8 Attribute'', die dessen körperlichen und geistigen Fähigkeiten beschreiben. Jedes Attribut kann einen Wert von ''1'' bis ''20'' annehmen und abhängig davon das Ergebnis betroffener Würfe verschlechtern oder verbessern. Der Standardwert eines jeden Attributs ist ''10'' und gibt keine Boni auf Würfe.
 
 ! Rechnen mit Attributen
@@ -14645,7 +14645,7 @@ Wer einen Wert von z.B. von ''10'' auf ''15'' erhöhen will darf ''//1+2+3+4+5=1
 
 ! Funktionen der Attribute
 
-&lt;div style=&quot;width:90%;margin:auto;&quot;&gt;
+&lt;div style=&quot;width:100%;margin:auto;&quot;&gt;
 
 &lt;style&gt;
 .att {
@@ -14653,38 +14653,74 @@ Wer einen Wert von z.B. von ''10'' auf ''15'' erhöhen will darf ''//1+2+3+4+5=1
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+#flex {
+    display: flex;
+    justify-content: space-evenely;
+    flex-flow: row wrap;
+}
+
+.container {
+    border: 1px solid #2E3440;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 16px;
+    margin: 16px;
+    width: 45%;
+    min-height: 300px;
+}
+
+#sta {order: 1;}
+#ath {order: 3;}
+#ges {order: 5;}
+#kon {order: 7;}
+#wah {order: 2;}
+#int {order: 4;}
+#wei {order: 6;}
+#cha {order: 8;}
+
 &lt;/style&gt;
 
-!! &lt;span id=&quot;sta&quot; class=&quot;att&quot;&gt;STÄRKE&lt;/span&gt;
+&lt;div id=&quot;flex&quot;&gt;
+&lt;div id=&quot;sta&quot; class=&quot;container&quot;&gt;
+&lt;h2&gt;&lt;span class=&quot;att&quot;&gt;STÄRKE&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
 Stärke gibt die generelle körperliche Kraft eines Charakters an. Die Stärke beeinflusst den Schaden, den man mit stumpfen Waffen anrichten kann und wird benötigt, um etwa schwere Rüstungen effektiv zu tragen oder manche Waffen sinnvoll nutzen zu können.
-&lt;br&gt;&lt;br&gt;
+&lt;/div&gt;
 
-!! &lt;span id=&quot;ath&quot; class=&quot;att&quot;&gt;ATHLETIK&lt;/span&gt;
+&lt;div id=&quot;ath&quot; class=&quot;container&quot;&gt;
+&lt;h2&gt;&lt;span class=&quot;att&quot;&gt;ATHLETIK&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
 Athletik beschreibt die Körperbeherrschung, Gewandtheit und generelle sportliche Begabung eines Charakters. Die Athletik beeinflusst den Schaden von Klingenwaffen und die Geschwindigkeit, mit der man sich bewegt.
-&lt;br&gt;&lt;br&gt;
+&lt;/div&gt;
 
-!! &lt;span id=&quot;ges&quot; class=&quot;att&quot;&gt;GESCHICK&lt;/span&gt;
+&lt;div id=&quot;ges&quot; class=&quot;container&quot;&gt;
+&lt;h2&gt;&lt;span class=&quot;att&quot;&gt;GESCHICK&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
 Geschicklichkeit ist das Talent für Handarbeiten und Auge-Hand-Koordination. Das Geschick beeinflusst den Schaden von Stichwaffen, sowie die Präzision beim Fernkampf, und ist ein Muss für alle guten Barden, die gerne Laute spielen.
-&lt;br&gt;&lt;br&gt;
+&lt;/div&gt;
 
-!! &lt;span id=&quot;kon&quot; class=&quot;att&quot;&gt;KONSTITUTION&lt;/span&gt;
+&lt;div id=&quot;kon&quot; class=&quot;container&quot;&gt;
+&lt;h2&gt;&lt;span class=&quot;att&quot;&gt;KONSTITUTION&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
 Konstitution repräsentiert die allgemeine Gesundheit und [[Ausdauer]] eines Charakters. Die Konstitution beeinflusst die Immunität gegen Krankheiten und Vergiftung, das Durchhaltevermögen bei langfristiger Anstrengung, und vor allem die Anzahl der Ausdauer-, bzw. Lebenspunkte im Kampf.
-&lt;br&gt;&lt;br&gt;
+&lt;/div&gt;
 
-!! &lt;span id=&quot;wah&quot; class=&quot;att&quot;&gt;WAHRNEHMUNG&lt;/span&gt;
+&lt;div id=&quot;wah&quot; class=&quot;container&quot;&gt;
+&lt;h2&gt;&lt;span class=&quot;att&quot;&gt;WAHRNEHMUNG&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
 Neben der selbsterklärende Funktion der Sinneswahrnehmung beschreibt das Attribut Wahrnehmung zudem die Reflexe eines Charakters. Abhängig vom Charakter gilt der Wahrnehmungswert nicht für alle Sinne. Ein Blinder kann 20 Wahrnehmung haben und sieht trotzdem nichts, ist dafür aber im Hören sehr gut.
-&lt;br&gt;&lt;br&gt;
+&lt;/div&gt;
 
-!! &lt;span id=&quot;int&quot; class=&quot;att&quot;&gt;INTELLIGENZ&lt;/span&gt;
+&lt;div id=&quot;int&quot; class=&quot;container&quot;&gt;
+&lt;h2&gt;&lt;span class=&quot;att&quot;&gt;INTELLIGENZ&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
 Intelligenz bestimmt die Lernfähigkeit und das logische Denkvermögen eines Charakters. Sie beeinflusst das Talent für Sprachen und die Fähigkeit zur Improvisation, vor allem beim Zaubern.
-&lt;br&gt;&lt;br&gt;
+&lt;/div&gt;
 
-!! &lt;span id=&quot;wei&quot; class=&quot;att&quot;&gt;WEISHEIT&lt;/span&gt;
+&lt;div id=&quot;wei&quot; class=&quot;container&quot;&gt;
+&lt;h2&gt;&lt;span class=&quot;att&quot;&gt;WEISHEIT&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
 Weisheit gibt das allgemeine Wissen eines Charakters über diverse Fähigkeiten an, die nicht zwangsläufig vom Muskelgedächtnis abhängiig sind. Weisheit beeinflusst etwa die Qualität von handwerklichen Leistungen und bestimmt die Willenskraft.
-&lt;br&gt;&lt;br&gt;
+&lt;/div&gt;
 
-!! &lt;span id=&quot;cha&quot; class=&quot;att&quot;&gt;CHARISMA&lt;/span&gt;
+&lt;div id=&quot;cha&quot; class=&quot;container&quot;&gt;
+&lt;h2&gt;&lt;span class=&quot;att&quot;&gt;CHARISMA&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
 Charisma misst die Überzeugungskraft, Eloquenz und Führungsstärke eines Charakters. Charisma verändert nicht die körperliche Attraktivität, sehr wohl jedoch die Fähigkeit mit Worten zu betören.
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;</pre>
 </div>

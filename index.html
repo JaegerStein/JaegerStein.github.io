@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Sculéru Regelwerk — v0.0.4 | 1. Edition</title>
+<title>Sculéru Wiki — v0.0.5 | 1. Edition</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -156,6 +156,8 @@ Error message and password prompt
 <li>$:/config/Navigation/UpdateAddressBar</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/palette</li>
 
 <li>$:/config/RelinkOnRename</li>
 
@@ -365,6 +367,9 @@ Error message and password prompt
 <pre>permaview</pre>
 </div>
 <div created="20210704205900492" modified="20210704205900492" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
+<pre>show</pre>
+</div>
+<div created="20220731141740428" creator="Keks" modified="20220731141740428" modifier="Keks" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/palette">
 <pre>show</pre>
 </div>
 <div created="20210706202417832" creator="Keks" modified="20210801152830876" modifier="Keks" title="$:/config/RelinkOnRename">
@@ -10394,8 +10399,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220730200146355" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>fiddled with responsiveness</pre>
+<div created="20210715231539247" creator="Keks" modified="20220731143248722" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>reorganized Attribute</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14321,14 +14326,14 @@ exports.create = function(wiki) {
 <div created="20210704210206527" modified="20210704210208544" title="$:/layout">
 <pre>$:/core/ui/PageTemplate</pre>
 </div>
-<div created="20210704204737730" modified="20210704210608055" title="$:/palette">
+<div created="20210704204737730" creator="Keks" modified="20220731142358881" modifier="Keks" title="$:/palette">
 <pre>$:/palettes/Nord</pre>
 </div>
-<div created="20210704211256991" creator="Keks" modified="20220730193839961" modifier="Keks" title="$:/SiteSubtitle">
-<pre>v0.0.4 | 1. Edition</pre>
+<div created="20210704211256991" creator="Keks" modified="20220731143255608" modifier="Keks" title="$:/SiteSubtitle">
+<pre>v0.0.5 | 1. Edition</pre>
 </div>
-<div created="20210704210759007" creator="Keks" modified="20220715162935792" modifier="Keks" title="$:/SiteTitle">
-<pre>Sculéru Regelwerk</pre>
+<div created="20210704210759007" creator="Keks" modified="20220731143302828" modifier="Keks" title="$:/SiteTitle">
+<pre>Sculéru Wiki</pre>
 </div>
 <div created="20210712115002430" creator="Keks" modified="20210712115004913" modifier="Keks" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/plugins/tiddlywiki/async">
 <pre>no</pre>
@@ -14381,7 +14386,7 @@ exports.create = function(wiki) {
 <div created="20210704210610637" modified="20210704210610637" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210704210019337" creator="Keks" modified="20220730200124065" modifier="Keks" title="$:/state/sidebar">
+<div created="20210704210019337" creator="Keks" modified="20220731143234237" modifier="Keks" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210712114731652" creator="Keks" modified="20210929132147738" modifier="Keks" title="$:/state/tab--1418380610">
@@ -14390,8 +14395,8 @@ exports.create = function(wiki) {
 <div created="20210706210104391" creator="Keks" modified="20210715170004339" modifier="Keks" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
-<div created="20210704204733393" creator="Keks" modified="20210715231251341" modifier="Keks" title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<div created="20210704204733393" creator="Keks" modified="20220731141733252" modifier="Keks" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
 <div created="20210717170833461" creator="Keks" modified="20210718152405847" modifier="Keks" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
@@ -14399,7 +14404,7 @@ exports.create = function(wiki) {
 <div created="20210929132141580" creator="Keks" modified="20210929132142399" modifier="Keks" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Languages</pre>
 </div>
-<div created="20210704204549924" creator="Keks" modified="20220718203416398" modifier="Keks" title="$:/state/tab-1749438307">
+<div created="20210704204549924" creator="Keks" modified="20220731143251814" modifier="Keks" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20210704205808925" creator="Keks" modified="20220718203414550" modifier="Keks" title="$:/state/tab-2065006209">
@@ -14411,8 +14416,8 @@ exports.create = function(wiki) {
 <div created="20210704205300562" creator="Keks" modified="20220715162909422" modifier="Keks" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20210704205856024" modified="20210704210531155" title="$:/state/tabs/controlpanel/toolbars-1345989671">
-<pre>$:/core/ui/ControlPanel/Toolbars/EditorToolbar</pre>
+<div created="20210704205856024" creator="Keks" modified="20220731141737020" modifier="Keks" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
 <div created="20210712135000140" creator="Keks" modified="20210712135151320" modifier="Keks" title="$:/state/tag-manager/Liste">
 <pre>closed</pre>
@@ -14438,7 +14443,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220730174731894" creator="Keks" list="Attribute $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220730200216964" modifier="Keks" title="$:/StoryList">
+<div created="20220731141720322" creator="Keks" list="Attribute $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220731143249810" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14618,32 +14623,8 @@ exports.create = function(wiki) {
 
 ''[[Zug|Züge]]'':</pre>
 </div>
-<div created="20220714203939773" creator="Keks" modified="20220730200120004" modifier="Keks" title="Attribute">
+<div created="20220714203939773" creator="Keks" modified="20220731143218508" modifier="Keks" title="Attribute">
 <pre>Jeder Charakter besitzt ''8 Attribute'', die dessen körperlichen und geistigen Fähigkeiten beschreiben. Jedes Attribut kann einen Wert von ''1'' bis ''20'' annehmen und abhängig davon das Ergebnis betroffener Würfe verschlechtern oder verbessern. Der Standardwert eines jeden Attributs ist ''10'' und gibt keine Boni auf Würfe.
-
-! Rechnen mit Attributen
-Der Bonus/Malus auf Attributswürfe ist linear und abhängig von der Differenz zur 10: 
-Eine ''11'' in einem Attribut gibt einen Bonus von ''//+1//'', eine ''12'' ''//+2//'', etc.
-Eine ''9'' in einem Attribut gibt einen Malus von ''//-1//'', eine ''8'' ''//-2//'', etc.
-Das bestmögliche Ergebnis eines Attributswurfes ohne [[Fähigkeiten]]
-ist ''30'' (Wurf ''20'' ''//+10//'' durch ''20 //Attributswert//'').&lt;br&gt;
-Das schlechteste Ergebnis ist 1, selbst wenn ein Attribut den Wurf unter ''1'' verschlechtern würde. Übrige Minuspunkte übertragen sich nicht auf Boni aus anderen Quellen, etwa von Fähigkeiten. Attributswerte werden bei dieser Rechnung priorisiert, alles andere folgt danach. 
-
-Ein Beispiel:&lt;br&gt;
-//Ein Charakter mit einem Attributswert von 5 und einem Fähigkeiteswert von 5 wirft eine 3.
-Durch das Attribut erhält er auf den Wurf einen Malus von -5.
-Die geworfene 3 wird auf 1 reduziert, der übrige -3 Malus verfällt.
-Durch den Fähigkeitswert erhält der Charakter +5 auf das bestehende Wurfergebniss.
-Das Endergebnis des Wurfes ist 6.//
-
-! Attributskosten
-Attribute zu steigern kostet Charakterpunkte, die ausschließlich vom DM vergeben werden.
-Jeder Wert kostet Charakterpunkte abhängig von seiner Entfernung zum Grundwert ''10''.
-Ein Attribut von ''10'' auf ''11'' zu erhöhen kostet ''//1//'' Punkt, von ''11'' auf ''12'' ''//2//'', etc.
-Ein Attribut von ''8'' auf ''9'' zu erhöhen kostet ''//2//'' Punkte, von ''9'' auf ''10'' ''//1//'', etc.
-Wer einen Wert von z.B. von ''10'' auf ''15'' erhöhen will darf ''//1+2+3+4+5=15//'' Punkte ausgeben.
-
-&lt;hr&gt;
 
 &lt;div style=&quot;width:100%;margin:auto;&quot;&gt;
 
@@ -14653,7 +14634,7 @@ Wer einen Wert von z.B. von ''10'' auf ''15'' erhöhen will darf ''//1+2+3+4+5=1
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 16px;
     
-    background: #3B4252;
+    /* background: #3B4252; */
 }
 
 h2 + br {display:block;margin:1em 0;}
@@ -14673,8 +14654,9 @@ h2 + br {display:block;margin:1em 0;}
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 16px;
     margin: 16px;
-    width: 45%;
-    min-height: 300px;
+    width: 20%;
+    min-width: 310px;
+    min-height: 310px;
 }
 
 .color {
@@ -14688,31 +14670,20 @@ h2 + br {display:block;margin:1em 0;}
     opacity: 0.15;
 }
 
-h2 {}
-
-#sta {order:1;background: linear-gradient(0deg, #3B4252 75%, #B22222 125%);}
-#ath {order:3;background: linear-gradient(0deg, #3B4252 75%, #FFA500 125%);}
-#ges {order:5;background: linear-gradient(0deg, #3B4252 75%, #F0E68C 125%);}
-#kon {order:7;background: linear-gradient(0deg, #3B4252 75%, #32CD32 125%);}
-#wah {order:2;background: linear-gradient(0deg, #3B4252 75%, #98FB98 125%);}
-#int {order:4;background: linear-gradient(0deg, #3B4252 75%, #00FFFF 125%);}
-#wei {order:6;background: linear-gradient(0deg, #3B4252 75%, #4169E1 125%);}
-#cha {order:8;background: linear-gradient(0deg, #3B4252 75%, #9370DB 125%);}
+#sta {background: linear-gradient(0deg, rgba(0,0,0,0) 75%, #B22222 125%);}
+#ath {background: linear-gradient(0deg, rgba(0,0,0,0) 75%, #FFA500 125%);}
+#ges {background: linear-gradient(0deg, rgba(0,0,0,0) 75%, #F0E68C 125%);}
+#kon {background: linear-gradient(0deg, rgba(0,0,0,0) 75%, #32CD32 125%);}
+#wah {background: linear-gradient(0deg, rgba(0,0,0,0) 75%, #98FB98 125%);}
+#int {background: linear-gradient(0deg, rgba(0,0,0,0) 75%, #00FFFF 125%);}
+#wei {background: linear-gradient(0deg, rgba(0,0,0,0) 75%, #4169E1 125%);}
+#cha {background: linear-gradient(0deg, rgba(0,0,0,0) 75%, #9370DB 125%);}
 
 @media only screen and (max-width: 1100px) {
 
 .container {
     width: 100%;
 }
-
-#sta{order:1;}
-#ath{order:2;}
-#ges{order:3;}
-#kon{order:4;}
-#wah{order:5;}
-#int{order:6;}
-#wei{order:7;}
-#cha{order:8;}
 
 }
 &lt;/style&gt;
@@ -14767,7 +14738,29 @@ Charisma misst die Überzeugungskraft, Eloquenz und Führungsstärke eines Chara
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+
+! Rechnen mit Attributen
+Der Bonus/Malus auf Attributswürfe ist linear und abhängig von der Differenz zur 10: 
+Eine ''11'' in einem Attribut gibt einen Bonus von ''//+1//'', eine ''12'' ''//+2//'', etc.
+Eine ''9'' in einem Attribut gibt einen Malus von ''//-1//'', eine ''8'' ''//-2//'', etc.
+Das bestmögliche Ergebnis eines Attributswurfes ohne [[Fähigkeiten]]
+ist ''30'' (Wurf ''20'' ''//+10//'' durch ''20 //Attributswert//'').&lt;br&gt;
+Das schlechteste Ergebnis ist 1, selbst wenn ein Attribut den Wurf unter ''1'' verschlechtern würde. Übrige Minuspunkte übertragen sich nicht auf Boni aus anderen Quellen, etwa von Fähigkeiten. Attributswerte werden bei dieser Rechnung priorisiert, alles andere folgt danach. 
+
+Ein Beispiel:&lt;br&gt;
+//Ein Charakter mit einem Attributswert von 5 und einem Fähigkeiteswert von 5 wirft eine 3.
+Durch das Attribut erhält er auf den Wurf einen Malus von -5.
+Die geworfene 3 wird auf 1 reduziert, der übrige -3 Malus verfällt.
+Durch den Fähigkeitswert erhält der Charakter +5 auf das bestehende Wurfergebniss.
+Das Endergebnis des Wurfes ist 6.//
+
+! Attributskosten
+Attribute zu steigern kostet Charakterpunkte, die ausschließlich vom DM vergeben werden.
+Jeder Wert kostet Charakterpunkte abhängig von seiner Entfernung zum Grundwert ''10''.
+Ein Attribut von ''10'' auf ''11'' zu erhöhen kostet ''//1//'' Punkt, von ''11'' auf ''12'' ''//2//'', etc.
+Ein Attribut von ''8'' auf ''9'' zu erhöhen kostet ''//2//'' Punkte, von ''9'' auf ''10'' ''//1//'', etc.
+Wer einen Wert von z.B. von ''10'' auf ''15'' erhöhen will darf ''//1+2+3+4+5=15//'' Punkte ausgeben.</pre>
 </div>
 <div created="20220715180935572" creator="Keks" modified="20220715182747072" modifier="Keks" title="Ausdauer">
 <pre>Analog zu klassischen Rollenspielen gibt Ausdauer die &quot;Lebenspunkte&quot; eines Charakters an und bestimmt, wie viele Treffer diese im Kampf einstecken können, bevor sie kampfunfähig werden. Anders als üblich ist sie jedoch nicht bloß gleichzusetzen mit der körperlichen Unversehrtheit, sondern ist stattdessen als abstrakte Mischung verschiedener Modifikatoren zu verstehen:

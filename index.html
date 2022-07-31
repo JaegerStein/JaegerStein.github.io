@@ -179,6 +179,8 @@ Error message and password prompt
 
 <li>$:/GitHub/Filename</li>
 
+<li>$:/GitHub/Path</li>
+
 <li>$:/GitHub/Repo</li>
 
 <li>$:/GitHub/Username</li>
@@ -313,9 +315,13 @@ Error message and password prompt
 
 <li>Fernkampf</li>
 
+<li>Flankieren</li>
+
 <li>Grundlagen</li>
 
 <li>Grundregelwerk</li>
+
+<li>Hinterhältiger Angriff</li>
 
 <li>Kampf</li>
 
@@ -10386,6 +10392,9 @@ exports.create = function(wiki) {
 <div created="20210706203227516" modified="20210706203229999" title="$:/GitHub/Filename">
 <pre>index.html</pre>
 </div>
+<div created="20220731183817887" creator="Keks" modified="20220731183829093" modifier="Keks" title="$:/GitHub/Path">
+<pre></pre>
+</div>
 <div created="20210706203257837" modified="20210706203520716" title="$:/GitHub/Repo">
 <pre>JaegerStein/JaegerStein.github.io</pre>
 </div>
@@ -10403,8 +10412,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220731151620825" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>changed toolbar</pre>
+<div created="20210715231539247" creator="Keks" modified="20220731183727318" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>added Flankieren and Hinterhältiger Angriff</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14390,7 +14399,7 @@ exports.create = function(wiki) {
 <div created="20210704210610637" modified="20210704210610637" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210704210019337" creator="Keks" modified="20220731143234237" modifier="Keks" title="$:/state/sidebar">
+<div created="20210704210019337" creator="Keks" modified="20220731183740668" modifier="Keks" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210712114731652" creator="Keks" modified="20210929132147738" modifier="Keks" title="$:/state/tab--1418380610">
@@ -14408,8 +14417,8 @@ exports.create = function(wiki) {
 <div created="20210929132141580" creator="Keks" modified="20210929132142399" modifier="Keks" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Languages</pre>
 </div>
-<div created="20210704204549924" creator="Keks" modified="20220731151603675" modifier="Keks" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20210704204549924" creator="Keks" modified="20220731183800107" modifier="Keks" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div created="20210704205808925" creator="Keks" modified="20220718203414550" modifier="Keks" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -14417,8 +14426,8 @@ exports.create = function(wiki) {
 <div created="20210707170241069" creator="Keks" modified="20220731151532697" modifier="Keks" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20210704205300562" creator="Keks" modified="20220731150623459" modifier="Keks" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20210704205300562" creator="Keks" modified="20220731181648262" modifier="Keks" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210704205856024" creator="Keks" modified="20220731141737020" modifier="Keks" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -14447,7 +14456,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220731150632963" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220731151600156" modifier="Keks" title="$:/StoryList">
+<div created="20220731180244740" creator="Keks" list="Attribute $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220731183757022" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -14976,6 +14985,14 @@ Schwierigkeitsgrade abhängig von der [[Entfernung|Maßeinheiten]] (Beispiel)
 |15|bis 60 Fuß|
 |20|bis 120 Fuß|</pre>
 </div>
+<div created="20220731180740727" creator="Keks" modified="20220731183655854" modifier="Keks" title="Flankieren">
+<pre>[img height=300 [asset\img\flank1.png]]
+[img height=300 [asset\img\flank2.png]]
+
+Frontal (grün): [[Angriffe|Kampf]] sind unbeeinflusst.&lt;br&gt;
+Seitlich (gelb): Der [[Verteidiger|Verteidigung]] erhält [[Nachteil|Vorteil &amp; Nachteil]].&lt;br&gt;
+Von Hinten (rot): Der Verteidiger erhält Nachteil, der Angreifer Vorteil</pre>
+</div>
 <div created="20220717211037417" creator="Keks" modified="20220718203035662" modifier="Keks" title="Grundlagen">
 <pre>*[[Allgemeine Begriffe]]
 *[[Charaktererstellung]]
@@ -14997,9 +15014,23 @@ Schwierigkeitsgrade abhängig von der [[Entfernung|Maßeinheiten]] (Beispiel)
 *[[Statuseffekte]]
 *[[Verletzungen]]</pre>
 </div>
-<div created="20220719213457998" creator="Keks" modified="20220719213526917" modifier="Keks" title="Kampf">
+<div created="20220731181201738" creator="Keks" modified="20220731183216206" modifier="Keks" title="Hinterhältiger Angriff">
+<pre>Wenn die [[angreifende|Kampf]] Kreatur noch nicht vom Gegner bemerkt wurde, kann diese den Versuch unternehmen, einen ''//Hinterhältigen Angriff//'' durchzuführen. Dazu muss diese einen [[Heimlichkeitswurf|Fähigkeiten]] gegen den gegnerischen [[Wahrnehmungswurf|Attribute]] bestehen.
+
+*Wenn sich die Kreatur frontal nährt, erhält der Gegner einen ''//+10//'' Bonus auf seinen Wahrnehmungswurf,
+*wenn sie sich seitlich nährt erhält er einen ''//+5//'' Bonus,
+*und er erhält keinen Bonus bei einer Annäherung von hinten.
+
+Was genau &quot;frontal&quot;, &quot;seitlich&quot; und &quot;von hinten&quot; bedeutet, bleibt dem [[Spielleiter]] überlassen. Siehe zur Inspiration &quot;[[Flankieren]]&quot;.
+
+Wenn die Kreatur den Heimlichkeitswurf besteht, bleibt sie verborgen und kann den Gegner angreifen, ohne dass sich dieser [[verteidigt|Verteidigung]]. Durch einen erfolgreichen ''//Hinterhältigen Angriff//'' erhält der Angreifer keine zusätzlichen Boni.</pre>
+</div>
+<div created="20220719213457998" creator="Keks" modified="20220731182957220" modifier="Keks" title="Kampf">
 <pre>*[[Nahkampf]]
-*[[Fernkampf]]</pre>
+*[[Fernkampf]]
+*[[Verteidigung]]
+*[[Flankieren]]
+*[[Hinterhältiger Angriff]]</pre>
 </div>
 <div created="20220715182809071" creator="Keks" modified="20220715183310099" modifier="Keks" title="Rast">
 <pre>Nach einem kräftezehrenden Kampf, am Ende eines langen Tages, oder vor einer großen Schlacht, können Charaktere sich nach Belieben dazu entscheiden zu rasten, um so ihre [[Ausdauer]] zu regenerieren, von unliebsamen [[Statusveränderungen|Statuseffekte]] befreit zu werden, oder ihre Zauberplätze wieder aufzufüllen. Ein Charakter, der nicht mindestens ''1 Ausdauerpunkt'' übrig hat, kann nicht rasten und muss zuerst gerettet werden.

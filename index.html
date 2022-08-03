@@ -261,6 +261,8 @@ Error message and password prompt
 
 <li>$:/state/Link/-1733656078/search</li>
 
+<li>$:/state/plugin-info--1292416854-$:/plugins/tiddlywiki/codemirror-closebrackets---633749888</li>
+
 <li>$:/state/plugin-info--906510658-$:/plugins/tiddlywiki/codemirror--1798174986</li>
 
 <li>$:/state/showeditpreview</li>
@@ -356,6 +358,8 @@ Error message and password prompt
 <li>Kampf</li>
 
 <li>Rast</li>
+
+<li>Rettungswürfe</li>
 
 <li>Statuseffekte</li>
 
@@ -10445,8 +10449,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220803161638783" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>added sub plugins</pre>
+<div created="20210715231539247" creator="Keks" modified="20220803164249703" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>updated Eigenschaften, Talente, added Rettungswürfe</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15087,7 +15091,10 @@ exports.create = function(wiki) {
 <div created="20210717123424488" creator="Keks" modified="20210717123428063" modifier="Keks" title="$:/state/Link/-1733656078/search">
 <pre></pre>
 </div>
-<div created="20220803161320125" creator="Keks" modified="20220803161320125" modifier="Keks" title="$:/state/plugin-info--906510658-$:/plugins/tiddlywiki/codemirror--1798174986">
+<div created="20220803162053693" creator="Keks" modified="20220803162056613" modifier="Keks" title="$:/state/plugin-info--1292416854-$:/plugins/tiddlywiki/codemirror-closebrackets---633749888">
+<pre>readme</pre>
+</div>
+<div created="20220803161320125" creator="Keks" modified="20220803162116781" modifier="Keks" title="$:/state/plugin-info--906510658-$:/plugins/tiddlywiki/codemirror--1798174986">
 <pre>usage</pre>
 </div>
 <div created="20210712114837616" creator="Keks" modified="20210825213355854" modifier="Keks" title="$:/state/showeditpreview">
@@ -15151,12 +15158,12 @@ exports.create = function(wiki) {
 <pre>show</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>yes</pre>
+<pre>no</pre>
 </div>
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220803161215146" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220803161338196" modifier="Keks" title="$:/StoryList">
+<div created="20220803161948585" creator="Keks" list="$:/STRG+UMSCHALT+R $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220803163927390" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -15531,9 +15538,11 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 *[[Persönlichkeit &amp; Hintergrund]]
 *[[Inventar]]</pre>
 </div>
-<div created="20220715175423468" creator="Keks" modified="20220715180718828" modifier="Keks" title="Eigenschaften">
-<pre>Eigenschaften sind spezielle Statuswerte eines Charakters, die entweder wahr oder falsch sind und im Normalfall nicht gesteigert werden können. Eigenschaften sind zumeist rein passiv, müssen also nicht explizit angewendet werden, womit sie sich von den [[Talenten|Talente]] unterscheiden.&lt;br&gt;
-Eingeschaften können alles mögliche sein und sind somit zu zahlreich, um eine vollständige Liste anzufertigen. Jeder Spieler kann nach eigenem Ermessen Eigenschaften und deren Effekte für seinen Charakter entwerfen, diese müssen aber vom Spielleiter zugelassen werden.
+<div created="20220715175423468" creator="Keks" modified="20220803164221900" modifier="Keks" title="Eigenschaften">
+<pre>''Eigenschaften'' sind spezielle Statuswerte eines Charakters, die entweder wahr oder falsch sind und im Normalfall nicht gesteigert werden können. Eigenschaften sind oft passiv, müssen also nicht explizit angewendet werden, können dem [[Charakter|Charaktere]] aber auch aktive Befähigungen verschaffen.&lt;br&gt;
+''Eingeschaften'' können alles mögliche sein und sind somit zu zahlreich, um eine vollständige Liste anzufertigen. Jeder Spieler kann nach eigenem Ermessen Eigenschaften und deren Effekte für seinen Charakter entwerfen, diese müssen aber vom Spielleiter zugelassen werden.
+
+''Eigenschaften'' werden bei der [[Charaktererstellung]] vom [[Spieler]] vergeben, während der [[Kampagne]] aber nicht mehr aktiv erworben werden. Stattdessen erhält man ''Eigenschaften'' vom [[Spielleiter]], der sie abhängig von den Ereignissen der Erzählung vergibt. ''Eigenschaften'' können sowohl positive, als auch negative Auswirkungen auf den betroffenen Charakter haben.
 
 Einige Beispiele für Charaktereigenschaften:
 
@@ -15702,17 +15711,19 @@ Von Hinten (rot): Der Verteidiger erhält Nachteil, der Angreifer Vorteil</pre>
 *[[Talente]]
 *[[Ausdauer]]</pre>
 </div>
-<div created="20220716210200989" creator="Keks" modified="20220718203350160" modifier="Keks" title="Grundregelwerk">
+<div created="20220716210200989" creator="Keks" modified="20220803162209424" modifier="Keks" title="Grundregelwerk">
 <pre>*[[Grundlagen]]
 *[[Völker]]
 *[[Ausrüstung]]
 *[[Kampf]]
 *[[Magie]]
+
 &lt;hr&gt;
 
 *[[Rast]]
 *[[Statuseffekte]]
-*[[Verletzungen]]</pre>
+*[[Verletzungen]]
+*[[Rettungswürfe]]</pre>
 </div>
 <div created="20220731181201738" creator="Keks" modified="20220731184338567" modifier="Keks" title="Hinterhältiger Angriff">
 <pre>Wenn die [[angreifende|Kampf]] Kreatur noch nicht vom Gegner bemerkt wurde, kann diese den Versuch unternehmen, einen ''//Hinterhältigen Angriff//'' durchzuführen. Dazu muss diese einen [[Heimlichkeitswurf|Fähigkeiten]] gegen den gegnerischen [[Wahrnehmungswurf|Attribute]] bestehen.
@@ -15756,6 +15767,15 @@ Charaktere die Schlaf benötigen, können ruhen, wann immer es passt; am ehesten
 Wer ''24 Stunden'' lang ohne Schlaf auf den Beinen war verliert temporär ''1 //maximalen Ausdauerpunkt//''. Dieser wird wiederhergestellt, sobald der Charakter seinen Schlaf nachholen konnte.
 Nach ''48 Stunden'' ohne Schlaf sinkt die maximale Ausdauer um weitere ''2 Punkte'', nach ''72 Stunden'' um zusätzliche ''3'', etc.
 Wer fünf Tage lang also kein Auge zutun kann, der büßt 15 Punkte maximaler Ausdauer ein. </pre>
+</div>
+<div created="20220803162255645" creator="Keks" modified="20220803163455301" modifier="Keks" title="Rettungswürfe">
+<pre>Arten von Rettungswürfen:
+
+*Reflex (ATH o. WAH)
+*Willenskraft (INT o. WEI)
+*Zähigkeit (STÄ o. KON)
+
+Verwendetes [[Attribut|Attribute]] kann vom [[Spieler]] gewählt werden. [[Boni|Modifikatoren]] auf Rettungswürfe können von [[Zaubern|Magie]], [[Talenten|Talente]] und [[Eigenschaften]] kommen, oder werden vom [[Spielleiter]] situationsabhängig vergeben.</pre>
 </div>
 <div created="20220716203305780" creator="Keks" modified="20220731145249698" modifier="Keks" title="Statuseffekte">
 <pre>Statuseffekte (oder Zustand) verändern die Fähigkeiten einer Kreatur auf unterschiedliche Weise und können durch [[Zauber|Magie]], [[Talente]], [[Eigenschaften]], bestimmte Attacken oder andere Effekte entstehen. Die meisten Statuseffekte, wie z.B. //blind//, sind Beeinträchtigungen, aber einige wenige, wie z.B. //unsichtbar//, können von Vorteil sein.
@@ -15809,9 +15829,11 @@ Die Kreatur ist bei Fähigkeitswürfen und Angriffen im Nachteil. Außerdem kann
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20220715175543209" creator="Keks" modified="20220715180717180" modifier="Keks" title="Talente">
-<pre>Talente sind besondere Fähigkeiten, die das Repertoire an verfügbaren Aktionen eines Charakters im Kampf und auch außerhalb beträchtlich erweitern können. Talente müssen zumeist aktiv eingesetzt werden.&lt;br&gt;
-Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollständige Liste anzufertigen. Jeder Spieler kann nach eigenem Ermessen Talente und deren Effekte für seinen Charakter entwerfen, diese müssen aber vom Spielleiter zugelassen werden.</pre>
+<div created="20220715175543209" creator="Keks" modified="20220803163721683" modifier="Keks" title="Talente">
+<pre>''Talente'' sind besondere Fähigkeiten, die das Repertoire an verfügbaren Aktionen eines Charakters im Kampf und auch außerhalb beträchtlich erweitern können. Talente können häufig aktiv eingesetzt werden, können aber auch passiv sein.&lt;br&gt;
+Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollständige Liste anzufertigen. Jeder Spieler kann nach eigenem Ermessen Talente und deren Effekte für seinen Charakter entwerfen, diese müssen aber vom Spielleiter zugelassen werden.
+
+''Talente'' sind vom [[Spieler]] erwünschte Befähigungen, die im Laufe der [[Kampagne]] erlernt werden.</pre>
 </div>
 <div created="20220714203025967" creator="Keks" modified="20220803155719548" modifier="Keks" tags="" title="Übersicht">
 <pre>&lt;style&gt;

@@ -339,6 +339,8 @@ Error message and password prompt
 
 <li>Ausdauer</li>
 
+<li>Ausrüstung</li>
+
 <li>Charaktererstellung</li>
 
 <li>Eigenschaften</li>
@@ -360,6 +362,8 @@ Error message and password prompt
 <li>Rast</li>
 
 <li>Rettungswürfe</li>
+
+<li>Rüstung</li>
 
 <li>Statuseffekte</li>
 
@@ -10449,8 +10453,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220803164249703" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>updated Eigenschaften, Talente, added Rettungswürfe</pre>
+<div created="20210715231539247" creator="Keks" modified="20220804115123057" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>added Ausrüstung, Rüstung</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15163,7 +15167,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220803161948585" creator="Keks" list="$:/STRG+UMSCHALT+R $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220803163927390" modifier="Keks" title="$:/StoryList">
+<div created="20220804114006964" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220804114111377" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -15533,6 +15537,9 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 
 [img[asset\img\health.png]]</pre>
 </div>
+<div created="20220804114103938" creator="Keks" modified="20220804114109052" modifier="Keks" title="Ausrüstung">
+<pre>*[[Rüstung]]</pre>
+</div>
 <div created="20220719213339922" creator="Keks" modified="20220719213444613" modifier="Keks" title="Charaktererstellung">
 <pre>*[[Professionen]]
 *[[Persönlichkeit &amp; Hintergrund]]
@@ -15776,6 +15783,21 @@ Wer fünf Tage lang also kein Auge zutun kann, der büßt 15 Punkte maximaler Au
 *Zähigkeit (STÄ o. KON)
 
 Verwendetes [[Attribut|Attribute]] kann vom [[Spieler]] gewählt werden. [[Boni|Modifikatoren]] auf Rettungswürfe können von [[Zaubern|Magie]], [[Talenten|Talente]] und [[Eigenschaften]] kommen, oder werden vom [[Spielleiter]] situationsabhängig vergeben.</pre>
+</div>
+<div created="20220804114122968" creator="Keks" modified="20220804115051260" modifier="Keks" title="Rüstung">
+<pre>Rüstungen bieten Schutz gegen verschiedene Arten von Schaden, vornehmlich STÄ, ATH und GES Schaden. Zudem können Rüstungen gewisse [[Resistenzwerte|Resistenzen]] gegen [[magische|Magie]] und andere Schadenstypen besitzen.
+
+Die notation für Rüstungen ist üblicherweise ''S|A|G +R''.
+
+Beispiel:&lt;br&gt;
+Eine Plattenrüstung hat einen Rüstwert von ''6|10|8''.&lt;br&gt;
+Ein magischer Umhang hat einen Rüstwert von ''1|0|0 +4 Feuer''.
+
+Tabelle für übliche Rüstungswerte:
+
+|!Rüstung|!Wert|
+|Plattenrüstung|6&amp;#124;10&amp;#124;8|
+|Gambeson|3&amp;#124;2&amp;#124;1|</pre>
 </div>
 <div created="20220716203305780" creator="Keks" modified="20220731145249698" modifier="Keks" title="Statuseffekte">
 <pre>Statuseffekte (oder Zustand) verändern die Fähigkeiten einer Kreatur auf unterschiedliche Weise und können durch [[Zauber|Magie]], [[Talente]], [[Eigenschaften]], bestimmte Attacken oder andere Effekte entstehen. Die meisten Statuseffekte, wie z.B. //blind//, sind Beeinträchtigungen, aber einige wenige, wie z.B. //unsichtbar//, können von Vorteil sein.

@@ -10461,8 +10461,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220810205402288" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>&quot;Charakterbogen&quot; erweitert</pre>
+<div created="20210715231539247" creator="Keks" modified="20220811120238702" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>&quot;Charakterbogen&quot; hat nun nicht-funktionsfähige Buttons</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -14388,7 +14388,7 @@ exports.create = function(wiki) {
 <div created="20210704210206527" modified="20210704210208544" title="$:/layout">
 <pre>$:/core/ui/PageTemplate</pre>
 </div>
-<div created="20210704204737730" creator="Keks" modified="20220810205342223" modifier="Keks" title="$:/palette">
+<div created="20210704204737730" creator="Keks" modified="20220811115301946" modifier="Keks" title="$:/palette">
 <pre>$:/palettes/Nord</pre>
 </div>
 <div dependents="" description="CodeMirror editor" list="readme usage keyboard license" name="CodeMirror" plugin-type="plugin" title="$:/plugins/tiddlywiki/codemirror" type="application/json" version="5.1.23">
@@ -15175,7 +15175,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220810205429923" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220810205540430" modifier="Keks" title="$:/StoryList">
+<div created="20220811111316006" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht Charakterbogen $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220811111316006" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -15548,7 +15548,7 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 <div created="20220804114103938" creator="Keks" modified="20220804114109052" modifier="Keks" title="Ausrüstung">
 <pre>*[[Rüstung]]</pre>
 </div>
-<div created="20220810195234187" creator="Keks" modified="20220810205323512" modifier="Keks" tags="" title="Charakterbogen">
+<div created="20220810195234187" creator="Keks" modified="20220811120140553" modifier="Keks" tags="" title="Charakterbogen">
 <pre>&lt;style&gt;
 	input[type=&quot;number&quot;].attribute {
 		width: 3em;
@@ -15559,7 +15559,7 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 		text-align: center;
 		font-size: 2em;
 		font-family: &quot;Lucida Console&quot;, Courier, monospace;
-		color: darkgrey;
+		color: #667799;
 		
 		border-radius: 0 50% 50% 0;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -15578,7 +15578,7 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 		border-radius: 50% 0 0 50%;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		line-height: 3em;
-		margin-bottom: 8px;
+		margin: 4px 0 4px 0;
 	}
 	
 	#attr {
@@ -15600,20 +15600,117 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 	#lwe {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #4169E1 400%);}
 	#lch {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #9370DB 400%);}
 
-}
+	.inpnum {
+		position: relative;
+		width: 6em;
+		height: 6em;
+		margin: 4px 0 4px 0;
+	}
+	
+	.highlighter {
+		position: absolute;
+		width: 6em;
+		height: 3em;
+		
+		pointer-events: none;
+		
+		display: flex;
+  	justify-content: center;
+	}
+	
+	.highlighter:hover {
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+	
+	.highlighter.pb {
+		border-radius: 0 3em 0 0;
+	}
+	
+	.highlighter.mb {
+		top: 3em;
+		left: 0;
+		
+		border-radius: 0 0 3em 0;
+	}
+	.inpnum button {
+		position: absolute;
+		pointer-events: auto;
+		
+		font-family: &quot;Lucida Console&quot;, Courier, monospace;
+		font-size: 1.5em;
+		text-align: center;
+		width: 4em;
+		height: 1em;
+		line-height: 0;
+		
+		margin: 0;
+		padding: 0;
+		
+		background: none;
+		color: #667799;
+		border: none;
+		
+		cursor: pointer;
+	}
+	
+	button.plus {
+		top: 0;
+	}
+	
+	button.minus {
+		bottom: 0;
+	}
 &lt;/style&gt;
 
 &lt;div&gt;
 	&lt;form&gt;
 		&lt;div id=&quot;attr&quot;&gt;
-			&lt;div id=&quot;lst&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;st&quot;&gt;STR&lt;/label&gt;&lt;/div&gt;&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;st&quot; name=&quot;st&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;&lt;br&gt;
-			&lt;div id=&quot;lat&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;at&quot;&gt;ATH&lt;/label&gt;&lt;/div&gt;&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;at&quot; name=&quot;at&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;&lt;br&gt;
-			&lt;div id=&quot;lge&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;ge&quot;&gt;GES&lt;/label&gt;&lt;/div&gt;&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;ge&quot; name=&quot;ge&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;&lt;br&gt;
-			&lt;div id=&quot;lko&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;ko&quot;&gt;KON&lt;/label&gt;&lt;/div&gt;&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;ko&quot; name=&quot;ko&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;&lt;br&gt;
-			&lt;div id=&quot;lwa&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;wa&quot;&gt;WAH&lt;/label&gt;&lt;/div&gt;&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;wa&quot; name=&quot;wa&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;&lt;br&gt;
-			&lt;div id=&quot;lin&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;in&quot;&gt;INT&lt;/label&gt;&lt;/div&gt;&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;in&quot; name=&quot;in&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;&lt;br&gt;
-			&lt;div id=&quot;lwe&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;we&quot;&gt;WEI&lt;/label&gt;&lt;/div&gt;&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;we&quot; name=&quot;we&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;&lt;br&gt;
-			&lt;div id=&quot;lch&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;ch&quot;&gt;CHA&lt;/label&gt;&lt;/div&gt;&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;ch&quot; name=&quot;ch&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;&lt;br&gt;
+			&lt;div id=&quot;lst&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;st&quot;&gt;STR&lt;/label&gt;&lt;/div&gt;
+			&lt;div class=&quot;inpnum&quot;&gt;
+				&lt;div class=&quot;highlighter pb&quot;&gt;
+					&lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;&lt;b&gt;&amp;#43;&lt;/b&gt;&lt;/button&gt;
+				&lt;/div&gt;
+				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;st&quot; name=&quot;st&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
+				&lt;div class=&quot;highlighter mb&quot;&gt;
+					&lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;&lt;b&gt;	&amp;#8722;&lt;/b&gt;&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+			&lt;div id=&quot;lat&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;at&quot;&gt;ATH&lt;/label&gt;&lt;/div&gt;
+			&lt;div class=&quot;inpnum&quot;&gt;
+				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;at&quot; name=&quot;at&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
+			&lt;/div&gt;
+			
+			&lt;div id=&quot;lge&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;ge&quot;&gt;GES&lt;/label&gt;&lt;/div&gt;
+			&lt;div class=&quot;inpnum&quot;&gt;
+				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;ge&quot; name=&quot;ge&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
+			&lt;/div&gt;
+			
+			&lt;div id=&quot;lko&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;ko&quot;&gt;KON&lt;/label&gt;&lt;/div&gt;
+			&lt;div class=&quot;inpnum&quot;&gt;
+				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;ko&quot; name=&quot;ko&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
+			&lt;/div&gt;
+			
+			&lt;div id=&quot;lwa&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;wa&quot;&gt;WAH&lt;/label&gt;&lt;/div&gt;
+			&lt;div class=&quot;inpnum&quot;&gt;
+				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;wa&quot; name=&quot;wa&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
+			&lt;/div&gt;
+			
+			&lt;div id=&quot;lin&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;in&quot;&gt;INT&lt;/label&gt;&lt;/div&gt;
+			&lt;div class=&quot;inpnum&quot;&gt;
+				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;in&quot; name=&quot;in&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
+			&lt;/div&gt;
+			
+			&lt;div id=&quot;lwe&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;we&quot;&gt;WEI&lt;/label&gt;&lt;/div&gt;
+			&lt;div class=&quot;inpnum&quot;&gt;
+				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;we&quot; name=&quot;we&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
+			&lt;/div&gt;
+			
+			&lt;div id=&quot;lch&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;ch&quot;&gt;CHA&lt;/label&gt;&lt;/div&gt;
+			&lt;div class=&quot;inpnum&quot;&gt;
+				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;ch&quot; name=&quot;ch&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
+			&lt;/div&gt;
+			
 		&lt;/div&gt;
 	&lt;/form&gt;
 &lt;/div&gt;</pre>

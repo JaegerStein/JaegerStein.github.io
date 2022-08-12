@@ -1,3 +1,5 @@
+console.log("alive");
+
 let buttons = document.querySelectorAll(".right button");
 console.log(buttons);
 buttons.forEach(element => element.addEventListener("click", handleClick));

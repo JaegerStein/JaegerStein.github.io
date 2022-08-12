@@ -10712,8 +10712,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220812161923524" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>import $:/.tb/macros/script</pre>
+<div created="20210715231539247" creator="Keks" modified="20220812162248938" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>hopefully enabled buttons?</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15424,12 +15424,12 @@ exports.create = function(wiki) {
 <pre>show</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>yes</pre>
+<pre>no</pre>
 </div>
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220812161700166" creator="Keks" list="Charakterbogen $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220812161932782" modifier="Keks" title="$:/StoryList">
+<div list="Charakterbogen $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -15802,7 +15802,7 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 <div created="20220804114103938" creator="Keks" modified="20220804114109052" modifier="Keks" title="Ausrüstung">
 <pre>*[[Rüstung]]</pre>
 </div>
-<div created="20220810195234187" creator="Keks" modified="20220812155315819" modifier="Keks" tags="" title="Charakterbogen">
+<div created="20220810195234187" creator="Keks" modified="20220812162235136" modifier="Keks" tags="" title="Charakterbogen">
 <pre>&lt;style&gt;
     .frame {
         display: inline-block;
@@ -16069,7 +16069,33 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
     &lt;/form&gt;
 &lt;/div&gt;
 
-&lt;script type=&quot;text/javascript&quot; src=&quot;cs.js&quot;&gt;&lt;/script&gt;</pre>
+&lt;&lt;script&gt;&gt;
+&lt;script&gt;
+console.log(&quot;alive&quot;);
+
+let buttons = document.querySelectorAll(&quot;.right button&quot;);
+console.log(buttons);
+buttons.forEach(element =&gt; element.addEventListener(&quot;click&quot;, handleClick));
+
+function handleClick(event) {
+    let element = event.target;
+    let target = element.parentNode.querySelector(&quot;.value&quot;);
+    if (element.className === &quot;plus&quot;) increment(target); else decrement(target);
+}
+
+function change(value, target) {
+    value ? target.textContent++ : target.textContent--; // how tf does this work, it's amazing
+}
+
+function increment(target) {
+    if (target.textContent &lt; 20) change(true, target);
+}
+
+function decrement(target) {
+    if (target.textContent &gt; 1) change(false, target)
+}
+&lt;/script&gt;
+&lt;&lt;script off&gt;&gt;</pre>
 </div>
 <div created="20220719213339922" creator="Keks" modified="20220719213444613" modifier="Keks" title="Charaktererstellung">
 <pre>*[[Professionen]]

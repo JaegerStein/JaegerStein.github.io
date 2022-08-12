@@ -143,6 +143,8 @@ Error message and password prompt
 
 <li>$:/.sculeru/macro</li>
 
+<li>$:/.sculeru/script.js</li>
+
 <li>$:/.sculeru/styles</li>
 
 <li>$:/.sculeru/test</li>
@@ -401,6 +403,39 @@ Error message and password prompt
 <div id="storeArea" style="display:none;">
 <div created="20210713214104343" creator="Keks" modified="20220714202921654" modifier="Keks" tags="$:/tags/Macro" title="$:/.sculeru/macro">
 <pre></pre>
+</div>
+<div created="20220812152918788" creator="Keks" modified="20220812153724680" modifier="Keks" module-type="macro" tags="" title="$:/.sculeru/script.js" type="application/javascript">
+<pre>/*\
+
+title: $:/.sculeru/script.js
+type: application/javascript
+module-type: macro
+
+macro to enable functionaility in &quot;Charakterbogen&quot;
+
+\*/
+
+let buttons = document.querySelectorAll(&quot;.right button&quot;);
+console.log(buttons);
+buttons.forEach(element =&gt; element.addEventListener(&quot;click&quot;, handleClick));
+
+function handleClick(event) {
+	let element = event.target;
+	let target = element.parentNode.querySelector(&quot;.value&quot;);
+	if (element.className === &quot;plus&quot;) increment(target); else decrement(target);
+}
+
+function change(value, target) {
+	value ? target.textContent++ : target.textContent--; // how tf does this work, it's amazing
+}
+
+function increment(target) {
+	if (target.textContent &lt; 20) change(true, target);
+}
+
+function decrement(target) {
+	if (target.textContent &gt; 1) change(false, target)
+}</pre>
 </div>
 <div created="20210803204928405" creator="Keks" modified="20210803210044929" modifier="Keks" tags="$:/tags/Stylesheet" title="$:/.sculeru/styles" type="text/css">
 <pre>.tc-sidebar-scrollable {
@@ -10677,8 +10712,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220812093833435" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>Test leicht geändert, responsiver</pre>
+<div created="20210715231539247" creator="Keks" modified="20220812153742645" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>integration von Javascript macro</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15298,8 +15333,8 @@ exports.create = function(wiki) {
 <div created="20210712115227889" creator="Keks" modified="20210712115231809" modifier="Keks" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/themes/tiddlywiki/centralised">
 <pre>no</pre>
 </div>
-<div created="20210712134928449" creator="Keks" modified="20210715170004338" modifier="Keks" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20210712134928449" creator="Keks" modified="20220812153100676" modifier="Keks" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20210712114845409" creator="Keks" modified="20210712114851638" modifier="Keks" title="$:/state/editpreviewtype">
 <pre>$:/core/ui/EditTemplate/body/preview/output</pre>
@@ -15331,14 +15366,14 @@ exports.create = function(wiki) {
 <div created="20210704210610637" modified="20210704210610637" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210704210019337" creator="Keks" modified="20220812093813601" modifier="Keks" title="$:/state/sidebar">
+<div created="20210704210019337" creator="Keks" modified="20220812153743636" modifier="Keks" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210712114731652" creator="Keks" modified="20210929132147738" modifier="Keks" title="$:/state/tab--1418380610">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Plugins</pre>
 </div>
-<div created="20210706210104391" creator="Keks" modified="20210715170004339" modifier="Keks" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20210706210104391" creator="Keks" modified="20220812153100676" modifier="Keks" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20210704204733393" creator="Keks" modified="20220731141733252" modifier="Keks" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
@@ -15361,8 +15396,8 @@ exports.create = function(wiki) {
 <div created="20210707170241069" creator="Keks" modified="20220811174856285" modifier="Keks" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20210704205300562" creator="Keks" modified="20220812093219653" modifier="Keks" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20210704205300562" creator="Keks" modified="20220812152909901" modifier="Keks" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20210704205856024" creator="Keks" modified="20220731141737020" modifier="Keks" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -15391,7 +15426,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220812092721662" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220812093221897" modifier="Keks" title="$:/StoryList">
+<div created="20220812152651642" creator="Keks" list="$:/.sculeru/script.js Charakterbogen $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220812153211207" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -15764,172 +15799,275 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 <div created="20220804114103938" creator="Keks" modified="20220804114109052" modifier="Keks" title="Ausrüstung">
 <pre>*[[Rüstung]]</pre>
 </div>
-<div created="20220810195234187" creator="Keks" modified="20220811120140553" modifier="Keks" tags="" title="Charakterbogen">
+<div created="20220810195234187" creator="Keks" modified="20220812152907858" modifier="Keks" tags="" title="Charakterbogen">
 <pre>&lt;style&gt;
-	input[type=&quot;number&quot;].attribute {
-		width: 3em;
-		height: 3em;
-		
-		-moz-appearance: textfield;
-		
-		text-align: center;
-		font-size: 2em;
-		font-family: &quot;Lucida Console&quot;, Courier, monospace;
-		color: #667799;
-		
-		border-radius: 0 50% 50% 0;
-		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-		background: rgba(0,0,0,0);
-		border: none;
-	}
-	
-	.lab {
-		width: 3em;
-		height: 3em;
-		
-		font-family: &quot;Lucida Console&quot;, Courier, monospace;
-		font-size: 2em;
-		text-align: center;
-		
-		border-radius: 50% 0 0 50%;
-		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-		line-height: 3em;
-		margin: 4px 0 4px 0;
-	}
-	
-	#attr {
-		display: flex;
-		flex-flow: row wrap;
-		width: 14em;
-		justify-content: space-evenly;
-		padding: 8px;
-		border-radius: 4em;
-		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	}
-	
-	#lst {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #B22222 400%);}
-	#lat {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #FFA500 400%);}
-	#lge {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #F0E68C 400%);}
-	#lko {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #32CD32 400%);}
-	#lwa {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #98FB98 400%);}
-	#lin {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #00FFFF 400%);}
-	#lwe {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #4169E1 400%);}
-	#lch {background: linear-gradient(270deg, rgba(0,0,0,0) 0, #9370DB 400%);}
+    .frame {
+        display: inline-block;
+        border-radius: 46px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 8px;
+        padding: 8px;
+    }
 
-	.inpnum {
-		position: relative;
-		width: 6em;
-		height: 6em;
-		margin: 4px 0 4px 0;
-	}
-	
-	.highlighter {
-		position: absolute;
-		width: 6em;
-		height: 3em;
-		
-		pointer-events: none;
-		
-		display: flex;
-  	justify-content: center;
-	}
-	
-	.highlighter:hover {
-		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	}
-	
-	.highlighter.pb {
-		border-radius: 0 3em 0 0;
-	}
-	
-	.highlighter.mb {
-		top: 3em;
-		left: 0;
-		
-		border-radius: 0 0 3em 0;
-	}
-	.inpnum button {
-		position: absolute;
-		pointer-events: auto;
-		
-		font-family: &quot;Lucida Console&quot;, Courier, monospace;
-		font-size: 1.5em;
-		text-align: center;
-		width: 4em;
-		height: 1em;
-		line-height: 0;
-		
-		margin: 0;
-		padding: 0;
-		
-		background: none;
-		color: #667799;
-		border: none;
-		
-		cursor: pointer;
-	}
-	
-	button.plus {
-		top: 0;
-	}
-	
-	button.minus {
-		bottom: 0;
-	}
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .left, .right {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px;
+
+        height: 92px;
+        width: 92px;
+        margin: 4px;
+
+        font-family: &quot;Lucida Console&quot;, Courier, monospace;
+        font-size: 24pt;
+        text-align: center;
+        line-height: 92px;
+    }
+
+    .left {
+        border-radius: 46px 0 0 45px;
+    }
+
+    .right {
+        border-radius: 0 46px 46px 0;
+        position: relative;
+    }
+
+    .value {
+        pointer-events: none;
+        position: relative;
+        z-index: 999;
+    }
+
+    .right button {
+        position: absolute;
+
+        height: 46px;
+        width: 92px;
+
+        background: none;
+        color: #667799;
+        border: none;
+
+        line-height: 46px;
+
+        cursor: pointer;
+    }
+
+    .right button div {
+        position: absolute;
+        left: 38px;
+        pointer-events: none;
+    }
+
+    .plus div {
+        top: -8px;
+    }
+
+    .plus {
+        top: 0;
+        left: 0;
+        border-radius: 0 46px 0 0;
+    }
+
+    .plus:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px -8px 16px -8px;
+    }
+
+    .minus div {
+        bottom: -8px;
+    }
+
+    .minus {
+        bottom: 0;
+        left: 0;
+        border-radius: 0 0 46px 0;
+    }
+
+    .minus:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 16px -8px;
+    }
+
+    #strength .left {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0, #B22222 400%);
+    }
+
+    #athletics .left {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0, #FFA500 400%);
+    }
+
+    #dexterity .left {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0, #F0E68C 400%);
+    }
+
+    #const .left {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0, #32CD32 400%);
+    }
+
+    #perception .left {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0, #98FB98 400%);
+    }
+
+    #intellect .left {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0, #00FFFF 400%);
+    }
+
+    #wisdom .left {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0, #4169E1 400%);
+    }
+
+    #charisma .left {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0, #9370DB 400%);
+    }
+
+    @media only screen and (max-width: 960px) {
+
+        .left, .right, .right button {
+            width: 40vw;
+        }
+
+        .right button div {
+            left: 47.5%;
+        }
+    }
 &lt;/style&gt;
 
-&lt;div&gt;
-	&lt;form&gt;
-		&lt;div id=&quot;attr&quot;&gt;
-			&lt;div id=&quot;lst&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;st&quot;&gt;STR&lt;/label&gt;&lt;/div&gt;
-			&lt;div class=&quot;inpnum&quot;&gt;
-				&lt;div class=&quot;highlighter pb&quot;&gt;
-					&lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;&lt;b&gt;&amp;#43;&lt;/b&gt;&lt;/button&gt;
-				&lt;/div&gt;
-				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;st&quot; name=&quot;st&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
-				&lt;div class=&quot;highlighter mb&quot;&gt;
-					&lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;&lt;b&gt;	&amp;#8722;&lt;/b&gt;&lt;/button&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-			
-			&lt;div id=&quot;lat&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;at&quot;&gt;ATH&lt;/label&gt;&lt;/div&gt;
-			&lt;div class=&quot;inpnum&quot;&gt;
-				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;at&quot; name=&quot;at&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
-			&lt;/div&gt;
-			
-			&lt;div id=&quot;lge&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;ge&quot;&gt;GES&lt;/label&gt;&lt;/div&gt;
-			&lt;div class=&quot;inpnum&quot;&gt;
-				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;ge&quot; name=&quot;ge&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
-			&lt;/div&gt;
-			
-			&lt;div id=&quot;lko&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;ko&quot;&gt;KON&lt;/label&gt;&lt;/div&gt;
-			&lt;div class=&quot;inpnum&quot;&gt;
-				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;ko&quot; name=&quot;ko&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
-			&lt;/div&gt;
-			
-			&lt;div id=&quot;lwa&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;wa&quot;&gt;WAH&lt;/label&gt;&lt;/div&gt;
-			&lt;div class=&quot;inpnum&quot;&gt;
-				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;wa&quot; name=&quot;wa&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
-			&lt;/div&gt;
-			
-			&lt;div id=&quot;lin&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;in&quot;&gt;INT&lt;/label&gt;&lt;/div&gt;
-			&lt;div class=&quot;inpnum&quot;&gt;
-				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;in&quot; name=&quot;in&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
-			&lt;/div&gt;
-			
-			&lt;div id=&quot;lwe&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;we&quot;&gt;WEI&lt;/label&gt;&lt;/div&gt;
-			&lt;div class=&quot;inpnum&quot;&gt;
-				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;we&quot; name=&quot;we&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
-			&lt;/div&gt;
-			
-			&lt;div id=&quot;lch&quot; class=&quot;lab&quot;&gt;&lt;label for=&quot;ch&quot;&gt;CHA&lt;/label&gt;&lt;/div&gt;
-			&lt;div class=&quot;inpnum&quot;&gt;
-				&lt;input class=&quot;attribute&quot; type=&quot;number&quot; id=&quot;ch&quot; name=&quot;ch&quot; value=&quot;10&quot; min=&quot;1&quot; max=&quot;20&quot; step=&quot;1&quot;&gt;
-			&lt;/div&gt;
-			
-		&lt;/div&gt;
-	&lt;/form&gt;
-&lt;/div&gt;</pre>
+&lt;div id=&quot;formframe&quot;&gt;
+    &lt;form&gt;
+        &lt;div class=&quot;frame&quot; id=&quot;attributes&quot;&gt;
+
+            &lt;!-- BEGIN ATTRIBUTES --&gt;
+
+            &lt;div class=&quot;container&quot; id=&quot;strength&quot;&gt;
+                &lt;div class=&quot;left&quot;&gt;
+                    &lt;span class=&quot;label&quot;&gt;STR&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;right&quot;&gt;
+                    &lt;span class=&quot;value&quot;&gt;10&lt;/span&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;
+                        &lt;div&gt;&amp;#9650;&lt;/div&gt;
+                    &lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;
+                        &lt;div&gt;&amp;#9660;&lt;/div&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;container&quot; id=&quot;athletics&quot;&gt;
+                &lt;div class=&quot;left&quot;&gt;
+                    &lt;span class=&quot;label&quot;&gt;ATH&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;right&quot;&gt;
+                    &lt;span class=&quot;value&quot;&gt;10&lt;/span&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;
+                        &lt;div&gt;&amp;#9650;&lt;/div&gt;
+                    &lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;
+                        &lt;div&gt;&amp;#9660;&lt;/div&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;container&quot; id=&quot;dexterity&quot;&gt;
+                &lt;div class=&quot;left&quot;&gt;
+                    &lt;span class=&quot;label&quot;&gt;GES&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;right&quot;&gt;
+                    &lt;span class=&quot;value&quot;&gt;10&lt;/span&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;
+                        &lt;div&gt;&amp;#9650;&lt;/div&gt;
+                    &lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;
+                        &lt;div&gt;&amp;#9660;&lt;/div&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;container&quot; id=&quot;const&quot;&gt;
+                &lt;div class=&quot;left&quot;&gt;
+                    &lt;span class=&quot;label&quot;&gt;KON&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;right&quot;&gt;
+                    &lt;span class=&quot;value&quot;&gt;10&lt;/span&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;
+                        &lt;div&gt;&amp;#9650;&lt;/div&gt;
+                    &lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;
+                        &lt;div&gt;&amp;#9660;&lt;/div&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;container&quot; id=&quot;perception&quot;&gt;
+                &lt;div class=&quot;left&quot;&gt;
+                    &lt;span class=&quot;label&quot;&gt;WAH&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;right&quot;&gt;
+                    &lt;span class=&quot;value&quot;&gt;10&lt;/span&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;
+                        &lt;div&gt;&amp;#9650;&lt;/div&gt;
+                    &lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;
+                        &lt;div&gt;&amp;#9660;&lt;/div&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;container&quot; id=&quot;intellect&quot;&gt;
+                &lt;div class=&quot;left&quot;&gt;
+                    &lt;span class=&quot;label&quot;&gt;INT&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;right&quot;&gt;
+                    &lt;span class=&quot;value&quot;&gt;10&lt;/span&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;
+                        &lt;div&gt;&amp;#9650;&lt;/div&gt;
+                    &lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;
+                        &lt;div&gt;&amp;#9660;&lt;/div&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;container&quot; id=&quot;wisdom&quot;&gt;
+                &lt;div class=&quot;left&quot;&gt;
+                    &lt;span class=&quot;label&quot;&gt;WEI&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;right&quot;&gt;
+                    &lt;span class=&quot;value&quot;&gt;10&lt;/span&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;
+                        &lt;div&gt;&amp;#9650;&lt;/div&gt;
+                    &lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;
+                        &lt;div&gt;&amp;#9660;&lt;/div&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;container&quot; id=&quot;charisma&quot;&gt;
+                &lt;div class=&quot;left&quot;&gt;
+                    &lt;span class=&quot;label&quot;&gt;CHA&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;right&quot;&gt;
+                    &lt;span class=&quot;value&quot;&gt;10&lt;/span&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;plus&quot;&gt;
+                        &lt;div&gt;&amp;#9650;&lt;/div&gt;
+                    &lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;minus&quot;&gt;
+                        &lt;div&gt;&amp;#9660;&lt;/div&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- END ATTRIBUTES --&gt;
+
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+
+
+</pre>
 </div>
 <div created="20220719213339922" creator="Keks" modified="20220719213444613" modifier="Keks" title="Charaktererstellung">
 <pre>*[[Professionen]]

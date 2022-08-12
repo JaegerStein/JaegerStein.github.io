@@ -289,6 +289,8 @@ Error message and password prompt
 
 <li>$:/state/tab--86143343</li>
 
+<li>$:/state/tab--959111941</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -406,27 +408,19 @@ Error message and password prompt
 <div created="20210713214104343" creator="Keks" modified="20220714202921654" modifier="Keks" tags="$:/tags/Macro" title="$:/.sculeru/macro">
 <pre></pre>
 </div>
-<div created="20220812163020785" creator="Keks" modified="20220812163257057" modifier="Keks" module-type="macro" tags="" title="$:/.sculeru/macros/script" type="application/javascript">
-<pre>(function(){
-
+<div created="20220812163020785" creator="Keks" modified="20220812164251398" modifier="Keks" module-type="macro" tags="" title="$:/.sculeru/macros/script" type="application/javascript">
+<pre>/*\
+title: $:/.sculeru/macros/script
+type: application/javascript
+module-type: macros
+\*/
+(function(){
+	
 /*jslint node: true, browser: true */
 /*global $tw: false */
 &quot;use strict&quot;;
 
-/*
-enables js via &lt;&lt;script&gt;&gt; and disables with &lt;&lt;script 0&gt;&gt;
-*/
-
-exports.name = &quot;script&quot;;
-
-exports.params = [
-	{name: &quot;run&quot;},
-];
-
-/*
-Run the macro
-*/
-exports.run = function(run) {
+exports.script = function() {
 
 console.log(&quot;alive&quot;);
 
@@ -10731,8 +10725,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20220812163343681" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>why must this be so complicated?</pre>
+<div created="20210715231539247" creator="Keks" modified="20220812164316090" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>updated function a bit, hopefully nothing broke</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15400,14 +15394,17 @@ exports.create = function(wiki) {
 <div created="20210704204733393" creator="Keks" modified="20220731141733252" modifier="Keks" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
-<div created="20210717170833461" creator="Keks" modified="20210718152405847" modifier="Keks" title="$:/state/tab--2112689675">
-<pre>$:/core/ui/ControlPanel/Basics</pre>
+<div created="20210717170833461" creator="Keks" modified="20220812163811981" modifier="Keks" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
 <div created="20220803161330901" creator="Keks" modified="20220803161330901" modifier="Keks" title="$:/state/tab--697582678">
 <pre>$:/core/ui/ControlPanel/Settings/CodeMirror</pre>
 </div>
 <div created="20210929132141580" creator="Keks" modified="20220803161314120" modifier="Keks" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
+</div>
+<div created="20220812163813075" creator="Keks" modified="20220812163813075" modifier="Keks" title="$:/state/tab--959111941">
+<pre>$:/core/ui/ControlPanel/LoadedModules</pre>
 </div>
 <div created="20210704204549924" creator="Keks" modified="20220812161840427" modifier="Keks" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
@@ -15443,12 +15440,12 @@ exports.create = function(wiki) {
 <pre>show</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>yes</pre>
+<pre>no</pre>
 </div>
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20220812162932088" creator="Keks" list="$:/.sculeru/macros/script Charakterbogen $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220812163054442" modifier="Keks" title="$:/StoryList">
+<div created="20220812163759817" creator="Keks" list="$:/.sculeru/macros/script Charakterbogen $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20220812164023674" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">

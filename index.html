@@ -15802,7 +15802,7 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 <div created="20220804114103938" creator="Keks" modified="20220804114109052" modifier="Keks" title="Ausrüstung">
 <pre>*[[Rüstung]]</pre>
 </div>
-<div created="20220810195234187" creator="Keks" modified="20220812162527824" modifier="Keks" tags="" title="Charakterbogen">
+<div created="20220810195234187" creator="Keks" modified="20220812162803526" modifier="Keks" tags="" title="Charakterbogen">
 <pre>&lt;style&gt;
     .frame {
         display: inline-block;
@@ -16073,14 +16073,14 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 &lt;script&gt;
 console.log(&quot;alive&quot;);
 
-var buttons = document.querySelectorAll(&quot;.right button&quot;);
-console.log(buttons);
-buttons.forEach(element =&gt; element.addEventListener(&quot;click&quot;, handleClick));
+let attbuttons = document.querySelectorAll(&quot;.right button&quot;);
+console.log(attbuttons);
+attbuttons.forEach(element =&gt; element.addEventListener(&quot;click&quot;, handleClick));
 
 function handleClick(event) {
-    var element = event.target;
-    var target = element.parentNode.querySelector(&quot;.value&quot;);
-    if (element.className === &quot;plus&quot;) increment(target); else decrement(target);
+    var attelement = event.target;
+    var atttarget = attelement.parentNode.querySelector(&quot;.value&quot;);
+    if (attelement.className === &quot;plus&quot;) increment(atttarget); else decrement(atttarget);
 }
 
 function change(value, target) {

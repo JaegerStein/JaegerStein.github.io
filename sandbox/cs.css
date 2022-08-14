@@ -1,0 +1,66 @@
+html {
+    background: rgba(59, 66, 82, 255);
+}
+
+#formframe {
+    color: white;
+    font-family: Georgia, serif;
+    width: 100%;
+}
+
+#charactersheet {
+    margin: 0;
+    padding: 0;
+}
+
+#charactersheet>div{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.frame {
+    display: inline-block;
+    padding: 8px;
+    margin: 8px;
+
+    border-radius: 46px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 8px;
+}
+
+.flex {
+    display: flex;
+}
+
+.tiny {
+    border-radius: 23px;
+}
+
+#basics {
+    float: left;
+}
+
+.frame>table {
+    color: white;
+}
+
+input {
+    background: rgba(46, 52, 64, 255);
+    color: white;
+}
+
+#endurance {
+    display: flex;
+    flex-direction: column;
+}
+
+#endurance-value {
+    font-size: 32pt;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+input[type='number']{
+    width: 64px;
+    text-align: center;
+}

@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="cs2.css">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- BEGIN FORM-->
+
+<div>
+    <form class="frame" id="form">
+
+        <!-- BEGIN GENERAL -->
+
+        <div class="frame small" id="general">
+            <label for="charactername">Name: <input type="text" id="charactername"></label>
+            <label for="race">Volk:
+                <input list="races" id="race">
+                <datalist id="races">
+                    <option value="Mensch">
+                    <option value="Elf">
+                    <option value="Zwerg">
+                </datalist>
+            </label>
+            <label for="profession">Profession: <input type="text" id="profession"></label>
+            <label for="age">Alter: <input type="number" id="age" step="1"></label>
+        </div>
+
+        <!-- END GENERAL -->
+        <div class="break inline"></div>
+        <!-- BEGIN ENDURANCE -->
+
+        <div class="frame small" id="endurance">
+            <h1>Ausdauer</h1>
+            <div class="frame tiny value">20</div>
+        </div>
+
+        <!-- END ENDURANCE -->
+        <div class="break"><br></div>
+        <!-- BEGIN ATTRIBUTES -->
+
+        <div class="frame small" id="attributes">
+            <div class="frame small attribute" id="strength"></div>
+            <div class="break inline"></div>
+            <div class="frame small attribute" id="athletics"></div>
+            <div class="break inline"></div>
+            <div class="frame small attribute" id="dexterity"></div>
+            <div class="break inline"></div>
+            <div class="frame small attribute" id="constitution"></div>
+            <div class="break inline"></div>
+            <div class="frame small attribute" id="perception"></div>
+            <div class="break inline"></div>
+            <div class="frame small attribute" id="wisdom"></div>
+            <div class="break inline"></div>
+            <div class="frame small attribute" id="intellect"></div>
+            <div class="break inline"></div>
+            <div class="frame small attribute" id="charisma"></div>
+        </div>
+
+        <!-- END ATTRIBUTES -->
+        <div class="break inline"></div>
+        <!-- BEING DEFENSE -->
+
+        <div class="frame small" id="defense">
+
+            <!-- BEING ARMOR -->
+
+            <div class="frame small" id="armor">
+                <h1>Rüstung</h1>
+                <table>
+                    <tr>
+                        <th>Wucht</th>
+                        <th>Schnitt</th>
+                        <th>Stich</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- END ARMOR -->
+            <div class="break inline"></div>
+            <!-- BEGIN RESISTANCE -->
+
+            <div class="frame small" id="resistance">
+                <h1>Resistenz</h1>
+            </div>
+
+            <!-- END RESISTANCE -->
+
+        </div>
+
+        <!-- END DEFENSE -->
+        <div class="break"><br></div>
+    </form>
+</div>
+
+<!-- END FORM-->
+
+<script type="application/javascript" src="cs2.js"></script>

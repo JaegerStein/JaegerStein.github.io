@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*** FRAME ***/
+
+#form {
+    font-family: Roboto Condensed, Roboto, Helvetica, sans-serif;
+    position: relative;
+    width: 100%;
+    background: rgba(224, 201, 166, 50% ´5)
+}
+
+#form:after {
+    content: "";
+    background-image: url("paper.jpg");
+    background-size: 100%;
+    opacity: 25%;
+    border-radius: 64px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    pointer-events: none;
+}
+
+.frame {
+    border-radius: 64px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 16px;
+
+    display: inline-block;
+    box-sizing: border-box;
+
+    padding: 16px;
+
+    vertical-align: top;
+}
+
+.small {
+    border-radius: 32px;
+}
+
+.tiny {
+    border-radius: 16px;
+}
+
+.break {
+    height: 8px;
+    width: 8px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+/*** GENERAL ***/
+
+/*** ATTRIBUTES ***/
+
+.attribute {
+    width: 96px;
+    height: 128px;
+}
+
+#strength {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #B22222 175%);
+}
+
+#athletics {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #FFA500 175%);
+}
+
+#dexterity {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #F0E68C 175%);
+}
+
+#constitution {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #32CD32 175%);
+}
+
+#perception {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #98FB98 175%);
+}
+
+#intellect {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #00FFFF 175%);
+}
+
+#wisdom {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #4169E1 175%);
+}
+
+#charisma {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #9370DB 175%);
+}

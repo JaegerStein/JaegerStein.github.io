@@ -9,14 +9,14 @@
     font-family: Roboto Condensed, Roboto, Helvetica, sans-serif;
     position: relative;
     width: 100%;
-    background: rgba(224, 201, 166, 50% ´5)
+    background: rgba(224, 201, 166, 15%)
 }
 
 #form:after {
     content: "";
     background-image: url("paper.jpg");
     background-size: 100%;
-    opacity: 25%;
+    opacity: 33%;
     border-radius: 64px;
 
     position: absolute;
@@ -45,7 +45,12 @@
 }
 
 .tiny {
+    padding: 0;
     border-radius: 16px;
+}
+
+.weak {
+    box-shadow: rgba(0, 0, 0, 0.10) 0 4px 8px;
 }
 
 .break {
@@ -64,6 +69,72 @@
 .attribute {
     width: 96px;
     height: 128px;
+}
+
+.attribute .mod {
+    width: 100%;
+    height: 50%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.attribute .value {
+    width: 100%;
+    height: 25%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.attribute .value button {
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    background: none;
+}
+
+.val {
+    font-size: 18pt;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+.att {
+    line-height: 48px;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.decrement {
+    border-radius: 0 0 0 16px;
+}
+
+.increment {
+    border-radius: 0 0 16px 0;
+}
+
+.attribute .lab {
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    padding: 4px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10pt;
+}
+
+.mod div {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.value button:hover {
+    cursor: pointer;
+    background: rgba(224, 201, 166, 66%);
 }
 
 #strength {
@@ -96,4 +167,10 @@
 
 #charisma {
     background: linear-gradient(rgba(0, 0, 0, 0) 25%, #9370DB 175%);
+}
+
+/*** ENDURANCE ***/
+
+#endurance {
+    height: 160px;
 }

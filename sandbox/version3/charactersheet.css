@@ -1,0 +1,133 @@
+/*** BEGIN COMMON ***/
+.relative {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/*** END COMMON ***/
+
+/*** BEGIN FRAME ***/
+.frame {
+    border-radius: 64px;
+    padding: 32px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 16px;
+
+    width: fit-content;
+}
+
+.small {
+    border-radius: 32px;
+    padding: 16px;
+}
+
+.tiny {
+    border-radius: 16px;
+    padding: 8px;
+}
+
+/*** END FRAME ***/
+
+/*** BEING FORM ***/
+#form {
+    /* Sets uniform font family for the form */
+    font-family: Roboto Condensed, Roboto, Helvetica, sans-serif;
+
+    /* Sets the form background color to used paper */
+    background: rgba(224, 201, 166, 0.5);
+}
+
+#form:after {
+    content: "";
+    background-image: url("paper.jpg");
+    background-size: 100%;
+    opacity: 33%;
+    border-radius: 64px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    pointer-events: none;
+}
+
+/*** END FORM ***/
+
+/*** BEGIN ATTRIBUTES ***/
+.attribute {
+    text-align: center;
+
+    width: 96px;
+    height: 96px;
+}
+
+.attribute .mod {
+    font-size: 32px;
+    font-weight: bold;
+    height: 50%;
+}
+
+.attribute .wrapper > * {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.attribute .real.value {
+    width: 32px;
+}
+
+.attribute button {
+    font-weight: bold;
+
+    border: none;
+    background: none;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 16px;
+    border-radius: 50%;
+
+    height: 32px;
+    width: 32px;
+}
+
+.attribute button:hover {
+    background: rgba(224, 201, 166, 0.5);
+}
+
+#strength {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #B22222 175%);
+}
+
+#athletics {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #FFA500 175%);
+}
+
+#dexterity {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #F0E68C 175%);
+}
+
+#constitution {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #32CD32 175%);
+}
+
+#perception {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #98FB98 175%);
+}
+
+#intellect {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #00FFFF 175%);
+}
+
+#wisdom {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #4169E1 175%);
+}
+
+#charisma {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #9370DB 175%);
+}
+/*** END ATTRIBUTES ***/
+

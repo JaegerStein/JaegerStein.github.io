@@ -8,12 +8,32 @@
     flex-flow: row nowrap;
 }
 
+.increment, .decrement {
+    font-weight: bold;
+
+    border: none;
+    background: none;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 16px;
+    border-radius: 50%;
+}
+
+.increment:hover, .decrement:hover {
+    background: rgba(224, 201, 166, 0.5);
+}
+
+.mod.value {
+    font-family: monospace !important;
+}
+
 /*** END COMMON ***/
 
 /*** BEGIN FRAME ***/
 .frame {
     border-radius: 64px;
     padding: 32px;
+    margin: 16px;
+
     box-shadow: rgba(0, 0, 0, 0.25) 0 4px 16px;
 
     width: fit-content;
@@ -22,11 +42,13 @@
 .small {
     border-radius: 32px;
     padding: 16px;
+    margin: 8px;
 }
 
 .tiny {
     border-radius: 16px;
     padding: 8px;
+    margin: 4px;
 }
 
 /*** END FRAME ***/
@@ -77,25 +99,13 @@
     line-height: 32px;
 }
 
-.attribute .real.value {
+.attribute .change.value {
     width: 32px;
 }
 
 .attribute button {
-    font-weight: bold;
-
-    border: none;
-    background: none;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 16px;
-    border-radius: 50%;
-
     height: 32px;
     width: 32px;
-}
-
-.attribute button:hover {
-    background: rgba(224, 201, 166, 0.5);
 }
 
 #strength {
@@ -129,5 +139,66 @@
 #charisma {
     background: linear-gradient(rgba(0, 0, 0, 0) 25%, #9370DB 175%);
 }
+
 /*** END ATTRIBUTES ***/
+
+/*** BEGIN ABILITIES ***/
+
+.ability {
+    line-height: 24px;
+}
+
+.ability .label {
+    width: 128px;
+    font-size: 16px;
+}
+
+.ability .wrapper {
+    font-size: 24px;
+    margin: 4px 0;
+}
+
+.ability button {
+    width: 24px;
+    height: 24px;
+}
+
+.ability .value {
+    text-align: center;
+    width: 48px;
+}
+
+#strength-abilities {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 25%, #B22222 175%);
+}
+
+#athletics-abilities {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 25%, #FFA500 175%);
+}
+
+#dexterity-abilities {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #F0E68C 175%);
+}
+
+#constitution-abilities {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #32CD32 175%);
+}
+
+#perception-abilities {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #98FB98 175%);
+}
+
+#intellect-abilities {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #00FFFF 175%);
+}
+
+#wisdom-abilities {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #4169E1 175%);
+}
+
+#charisma-abilities {
+    background: linear-gradient(rgba(0, 0, 0, 0) 25%, #9370DB 175%);
+}
+
+/*** END ABILITIES ***/
 

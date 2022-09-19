@@ -5,7 +5,6 @@
 
 <div class="wrapper" id="outermost">
     <form class="relative frame" id="form">
-
         <div class="frame" id="basics">
             <div class="small frame" id="attributes">
                 <h1>Attribute</h1>
@@ -31,67 +30,93 @@
                 </div>
             </div>
         </div>
-
         <div class="frame" id="abilities">
             <h1>Fähigkeiten</h1>
-            <div class="small frame" id="common">
-                <div class="tiny frame" id="strength-abilities">
-                    <h2>Stärke</h2>
-                    <div class="ability flex">
-                        <div class="label">Kraftakt</div>
-                        <div class="flex wrapper">
-                            <button type="button" class="decrement signed">-</button>
-                            <div class="change mod value">0</div>
-                            <button type="button" class="increment signed">+</button>
+            <div class="flex">
+                <div class="small frame" id="common">
+                    <div class="tiny frame" id="strength-abilities">
+                        <h2>Stärke</h2>
+                        <div class="ability flex">
+                            <div class="label">Kraftakt</div>
+                            <div class="flex wrapper">
+                                <button type="button" class="decrement signed">-</button>
+                                <div class="change mod value">0</div>
+                                <button type="button" class="increment signed">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="tiny frame" id="athletics-abilities">
+                        <h2>Athletik</h2>
+                        <div class="ability flex">
+                            <div class="label">Akrobatik</div>
+                            <div class="flex wrapper">
+                                <button type="button" class="decrement signed">-</button>
+                                <div class="change mod value">0</div>
+                                <button type="button" class="increment signed">+</button>
+                            </div>
+                        </div>
+                        <div class="ability flex">
+                            <div class="label">Heimlichkeit</div>
+                            <div class="flex wrapper">
+                                <button type="button" class="decrement signed">-</button>
+                                <div class="change mod value">0</div>
+                                <button type="button" class="increment signed">+</button>
+                            </div>
+                        </div>
+                        <div class="ability flex">
+                            <div class="label">Klettern</div>
+                            <div class="flex wrapper">
+                                <button type="button" class="decrement signed">-</button>
+                                <div class="change mod value">0</div>
+                                <button type="button" class="increment signed">+</button>
+                            </div>
+                        </div>
+                        <div class="ability flex">
+                            <div class="label">Reiten</div>
+                            <div class="flex wrapper">
+                                <button type="button" class="decrement signed">-</button>
+                                <div class="change mod value">0</div>
+                                <button type="button" class="increment signed">+</button>
+                            </div>
+                        </div>
+                        <div class="ability flex">
+                            <div class="label">Schwimmen</div>
+                            <div class="flex wrapper">
+                                <button type="button" class="decrement signed">-</button>
+                                <div class="change mod value">0</div>
+                                <button type="button" class="increment signed">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="tiny frame" id="athletics-abilities">
-                    <h2>Athletik</h2>
-                    <div class="ability flex">
-                        <div class="label">Akrobatik</div>
-                        <div class="flex wrapper">
-                            <button type="button" class="decrement signed">-</button>
-                            <div class="change mod value">0</div>
-                            <button type="button" class="increment signed">+</button>
+                <div class="small frame" id="special">
+                    <div class="tiny frame" id="craft-abilities">
+                        <h2>Handwerk</h2>
+                        <div class="ability flex">
+                            <label><input type="text" class="label" placeholder="Handwerk" onkeypress="enterAbility()"></label>
+                            <div class="flex wrapper">
+                                <button type="button" class="decrement signed">-</button>
+                                <div class="change mod value">0</div>
+                                <button type="button" class="increment signed">+</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="ability flex">
-                        <div class="label">Heimlichkeit</div>
-                        <div class="flex wrapper">
-                            <button type="button" class="decrement signed">-</button>
-                            <div class="change mod value">0</div>
-                            <button type="button" class="increment signed">+</button>
-                        </div>
-                    </div>
-                    <div class="ability flex">
-                        <div class="label">Klettern</div>
-                        <div class="flex wrapper">
-                            <button type="button" class="decrement signed">-</button>
-                            <div class="change mod value">0</div>
-                            <button type="button" class="increment signed">+</button>
-                        </div>
-                    </div>
-                    <div class="ability flex">
-                        <div class="label">Reiten</div>
-                        <div class="flex wrapper">
-                            <button type="button" class="decrement signed">-</button>
-                            <div class="change mod value">0</div>
-                            <button type="button" class="increment signed">+</button>
-                        </div>
-                    </div>
-                    <div class="ability flex">
-                        <div class="label">Schwimmen</div>
-                        <div class="flex wrapper">
-                            <button type="button" class="decrement signed">-</button>
-                            <div class="change mod value">0</div>
-                            <button type="button" class="increment signed">+</button>
+                    <hr>
+                    <div class="tiny frame" id="other-abilities">
+                        <h2>Sonstige Fähigkeiten</h2>
+                        <div class="ability flex">
+                            <div class="label">Sonstig</div>
+                            <div class="flex wrapper">
+                                <button type="button" class="decrement signed">-</button>
+                                <div class="change mod value">0</div>
+                                <button type="button" class="increment signed">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </form>
 </div>
 

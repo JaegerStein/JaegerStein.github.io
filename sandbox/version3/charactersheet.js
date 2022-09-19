@@ -49,3 +49,7 @@ function updateModifier(value, target) {
 }
 
 /*** END ATTRIBUTE BUTTONS ***/
+
+function enterAbility(event) {
+
+}

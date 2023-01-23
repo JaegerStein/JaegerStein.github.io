@@ -381,6 +381,8 @@ Error message and password prompt
 
 <li>Rüstung</li>
 
+<li>Schadensdurchdringung</li>
+
 <li>Statuseffekte</li>
 
 <li>Talente</li>
@@ -10733,8 +10735,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20221212151850576" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>Fernkampf Update</pre>
+<div created="20210715231539247" creator="Keks" modified="20230123191557166" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>Schadensdurchdringung</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15453,7 +15455,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20221212151424946" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20221212151940355" modifier="Keks" title="$:/StoryList">
+<div created="20230123191127453" creator="Keks" list="Schadensdurchdringung $:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20230123191127453" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -16558,6 +16560,13 @@ Tabelle für übliche Rüstungswerte:
 |!Rüstung|!Wert|
 |Plattenrüstung|6&amp;#124;10&amp;#124;8|
 |Gambeson|3&amp;#124;2&amp;#124;1|</pre>
+</div>
+<div created="20230123191241555" creator="Keks" modified="20230123191545108" modifier="Keks" tags="" title="Schadensdurchdringung">
+<pre>Verteidigung gegen verursachten Schaden wird in folgender Reihenfolge berechnet:
+
+Magische Schilde ➔ Physische Schilde ➔ Magische Resistenzen ➔ Physische Resistenzen ➔ Schmerzresistenz ➔ [[Ausdauer]]
+
+Heißt zuherst verteidigt magische Rüstung, zum Schluss erst sinkt die Ausdauer.</pre>
 </div>
 <div created="20220716203305780" creator="Keks" modified="20220731145249698" modifier="Keks" title="Statuseffekte">
 <pre>Statuseffekte (oder Zustand) verändern die Fähigkeiten einer Kreatur auf unterschiedliche Weise und können durch [[Zauber|Magie]], [[Talente]], [[Eigenschaften]], bestimmte Attacken oder andere Effekte entstehen. Die meisten Statuseffekte, wie z.B. //blind//, sind Beeinträchtigungen, aber einige wenige, wie z.B. //unsichtbar//, können von Vorteil sein.

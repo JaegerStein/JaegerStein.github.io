@@ -355,8 +355,6 @@ Error message and password prompt
 
 <li>Charaktererstellung</li>
 
-<li>Draft of '$:/language/ControlPanel/Saving/GitService/CommitMessage' by Keks</li>
-
 <li>Draft of 'Übersicht' by Keks</li>
 
 <li>Eigenschaften</li>
@@ -418,7 +416,7 @@ Error message and password prompt
 <div created="20210713214104343" creator="Keks" modified="20220714202921654" modifier="Keks" tags="$:/tags/Macro" title="$:/.sculeru/macro">
 <pre></pre>
 </div>
-<div created="20230129134316361" creator="Keks" modified="20230130141502786" modifier="Keks" module-type="macro" tags="" title="$:/.sculeru/macros/rangeddice" type="application/javascript">
+<div created="20230129134316361" creator="Keks" modified="20230130142043008" modifier="Keks" module-type="macro" tags="" title="$:/.sculeru/macros/rangeddice" type="application/javascript">
 <pre>/*\
 title: $:/.sculeru/macros/rangeddice
 type: application/javascript
@@ -474,10 +472,11 @@ exports.run = function(format) {
 
 	function macro() {
   	document.querySelector(&quot;#ranged-damage&quot;).addEventListener(&quot;input&quot;, (ev) =&gt; {
-    	document.querySelector(&quot;#ranged-dice&quot;).innerHTML = macro(ev.target);
+    	document.querySelector(&quot;#ranged-dice&quot;).textContent = macro(ev.target);
   	});
 	}
 	
+	macro();
 	return &quot;&quot;;
 };
 
@@ -10808,8 +10807,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20230129140504912" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>Damage Dice test</pre>
+<div created="20210715231539247" creator="Keks" modified="20230130142058536" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>I hope dice calculator should work now</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15528,7 +15527,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20230130134531116" creator="Keks" list="$:/.sculeru/macros/script $:/.sculeru/macros/rangeddice $:/STRG+UMSCHALT+R Übersicht [[Draft of '$:/language/ControlPanel/Saving/GitService/CommitMessage' by Keks]]" modified="20230130140635066" modifier="Keks" title="$:/StoryList">
+<div created="20230130141943181" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20230130141950712" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -16344,9 +16343,6 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 *[[Persönlichkeit &amp; Hintergrund]]
 *[[Inventar]]</pre>
 </div>
-<div created="20210715231539247" creator="Keks" draft.of="$:/language/ControlPanel/Saving/GitService/CommitMessage" draft.title="$:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20230130141517398" modifier="Keks" title="Draft of '$:/language/ControlPanel/Saving/GitService/CommitMessage' by Keks">
-<pre>Damage Dice test</pre>
-</div>
 <div created="20230130141407972" creator="Keks" modified="20230130141438205" modifier="Keks" title="Draft of 'Übersicht' by Keks">
 <pre>&lt;style&gt;
 h2{padding:0;margin:0;}
@@ -16790,7 +16786,7 @@ Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollst
 
 ''Talente'' sind vom [[Spieler]] erwünschte Befähigungen, die im Laufe der [[Kampagne]] erlernt werden.</pre>
 </div>
-<div created="20220714203025967" creator="Keks" modified="20230130141401679" modifier="Keks" tags="" title="Übersicht">
+<div created="20220714203025967" creator="Keks" modified="20230130142743126" modifier="Keks" tags="" title="Übersicht">
 <pre>&lt;style&gt;
 h2{padding:0;margin:0;}
 .border{box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
@@ -16817,12 +16813,14 @@ h2{padding:0;margin:0;}
     &lt;/div&gt;
 		&lt;div class=&quot;border&quot; style=&quot;margin:8px;padding:8px;border-radius:16px;min-width:256px;max-width:512px;&quot;&gt;
 		
-		&lt;h2&gt;Würfel für Fernkampfschaden&lt;/h2&gt;
+		!!Würfel für Fernkampfschaden
 		⮩ Siehe [[Fernkampf]]&lt;br&gt;&lt;br&gt;
+		&lt;div style=&quot;width=100%;box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 9px;padding:15px;border-radius:16px;&quot;&gt;
 		&lt;label for=&quot;dice&quot;&gt;Schadenspotenzial (`Wurfergebnis - Schwierigkeitsgrad`)&lt;/label&gt;
     &lt;input style=&quot;margin: 16px&quot; type=&quot;number&quot; id=&quot;ranged-damage&quot; name=&quot;dice&quot; min=&quot;1&quot;&gt;
 		&lt;span&gt;Schadenswürfel: &lt;/span&gt;&lt;span id=&quot;ranged-dice&quot;&gt;&lt;/span&gt;
 		&lt;&lt;rangeddice&gt;&gt;
+		&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</pre>
 </div>

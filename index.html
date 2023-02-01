@@ -16748,7 +16748,7 @@ Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollst
 
 ''Talente'' sind vom [[Spieler]] erwünschte Befähigungen, die im Laufe der [[Kampagne]] erlernt werden.</pre>
 </div>
-<div created="20220714203025967" creator="Keks" modified="20230201124532808" modifier="Keks" tags="" title="Übersicht">
+<div created="20220714203025967" creator="Keks" modified="20230201125711969" modifier="Keks" tags="" title="Übersicht">
 <pre>&lt;style&gt;
 	h2 { padding: 0; margin: 0; }
 	.border { box-shadow: 0 0 16px rgba(0 0 0 / calc(1/3)); }
@@ -16759,11 +16759,18 @@ Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollst
 		justify-content: flex-start;
 		gap: 16px;
 	}
+	.flex-col {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		justify-content: center;
+		align-items: center;
+	}
 	.flex &gt; div {
 		flex-basis: 23%
 	}
 	input[type=&quot;number&quot;] {
-  	width: 48px;
+  	width: 50%;
   	height: 24px;
   	font-size: 16px;
   	padding: 0;
@@ -16831,12 +16838,12 @@ Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollst
 ⮩ Siehe [[Fernkampf]]&lt;br&gt;&lt;br&gt;
 		
 			&lt;div style=&quot;width: 100%; display: flex; justify-content: center;&quot;&gt;
-				&lt;div class=&quot;border box&quot; style=&quot;width: 90%;&quot;&gt;
-					&lt;label for=&quot;dice&quot; style=&quot;white-space: nowrap;&quot;&gt;Schadenspotenzial (W - SG)&lt;/label&gt;&lt;br&gt;
+				&lt;div class=&quot;border box flex-col&quot; style=&quot;width: 90%;&quot;&gt;
+					&lt;label for=&quot;dice&quot; style=&quot;white-space: nowrap;&quot;&gt;Schadenspotenzial (W - SG)&lt;/label&gt;
 				
     			&lt;input type=&quot;number&quot; id=&quot;ranged-damage&quot; name=&quot;dice&quot; min=&quot;1&quot;&gt;
 				
-					&lt;span&gt;Schadenswürfel: &lt;/span&gt;&lt;span id=&quot;ranged-dice&quot;&gt;&lt;/span&gt;
+					&lt;div&gt;&lt;span&gt;Schadenswürfel: &lt;/span&gt;&lt;span id=&quot;ranged-dice&quot;  style=&quot;display: inline-block; width: 100px; text-align: center;&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 					&lt;&lt;rangeddice&gt;&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;

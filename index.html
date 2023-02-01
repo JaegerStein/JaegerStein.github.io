@@ -379,11 +379,13 @@ Error message and password prompt
 
 <li>Rast</li>
 
+<li>Resistenz</li>
+
 <li>Rettungswürfe</li>
 
 <li>Rüstung</li>
 
-<li>Schadensarten</li>
+<li>Schadensart</li>
 
 <li>Schadensdurchdringung</li>
 
@@ -10805,8 +10807,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20230201124540946" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>rework overview</pre>
+<div created="20210715231539247" creator="Keks" modified="20230201135410508" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>added Resistenz</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15495,7 +15497,7 @@ exports.create = function(wiki) {
 <div created="20210707170241069" creator="Keks" modified="20230129141029686" modifier="Keks" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20210704205300562" creator="Keks" modified="20230201115751009" modifier="Keks" title="$:/state/tab/sidebar--595412856">
+<div created="20210704205300562" creator="Keks" modified="20230201135427695" modifier="Keks" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210704205856024" creator="Keks" modified="20220731141737020" modifier="Keks" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -15525,7 +15527,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" title="$:/StoryList">
+<div created="20230201125748081" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20230201134703456" modifier="Keks" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -16633,6 +16635,60 @@ Wer ''24 Stunden'' lang ohne Schlaf auf den Beinen war verliert temporär ''1 //
 Nach ''48 Stunden'' ohne Schlaf sinkt die maximale Ausdauer um weitere ''2 Punkte'', nach ''72 Stunden'' um zusätzliche ''3'', etc.
 Wer fünf Tage lang also kein Auge zutun kann, der büßt 15 Punkte maximaler Ausdauer ein. </pre>
 </div>
+<div created="20230201125807558" creator="Keks" modified="20230201135125212" modifier="Keks" tags="" title="Resistenz">
+<pre>''Resistenzen'' ermöglichen es, Teile des eingehenden Schadens zu ignorieren. Dies ist abhängiger von der Art der Resistenz der [[Art des verursachten Schadens|Schadensart]]. Wenn eine [[Kreatur]] eine gewisse Resistenz gegen eine Schadensart besitzt, kann diese jedes Mal, wenn sie Schaden dieser Art nimmst, den Schaden um den Wert der Resistenz reduzieren (mit einem Minimum von 0 Schaden).
+
+!!Schmerzresistenz
+Schmerzresistenz bildet unter den Resistenzen eine Ausnahme, da diese Schutz gegen jegliche Schadensart bietet, kann aber immer nur die Hälfte des erhaltenen Schadens absorbieren; die andere Hälfte greift immer noch die [[Ausdauer]] an. Bei ungeradem Schadenswert absorbiert die Schmerzresistenz immer die höhere &quot;Hälfte&quot; (19 Schaden =&gt; 10 Schmerzresistenz + 9 Ausdauer Schaden). Daher macht es wenig Sinn, einer Kreatur mehr Schmerzresistenz zu geben, als sie Ausdauer zur Verfügung hat.&lt;br&gt;
+Da Schmerzresistenz alle Schadensarten abdeckt ist sie aus Balancing-Gründen immer //abbauend//.
+
+---
+
+!Abbauende u. Andauernde Resistenzen
+
+*Abbauende Resistenzen sinken im Kampf mit jedem absorbierten Treffer, bis diese aufgebraucht sind. Diese Art der Resistenz fungiert somit als zusätzliche Lebenspunkte gegen bestimmte Angriffstypen. Abbauende Resistenzen regenerieren währen der [[Langen Rast|Rast]] oder können über [[Zauber]] und [[Talente|Talent]] erhöht werden. Abbauende Resistenzen sind [[stapelbar|Allgemeine Begriffe]].
+
+*Andauernde Resistenzen hingegen bleiben während des gesamten Kampfes vorhanden und reduzieren jeden angemessenen Schaden um die Höhe der Resistenz. Diese Art der Resistenz ähnelt somit der Funktionsweise von [[Rüstungen|Rüstung]].&lt;br&gt;
+``???
+Andauernde Resistenzen sind (abseits von natürlicher Resistenz?) nicht stapelbar; es wird immer der höchste externe Modifikator verwendet.
+
+Beispiel:
+Charakter mit +5 natürlicher Feuerresistenz, +3 Ring, +4 Rüstung, +5 Trank, +6 durch Talent, +7 durch Zauber, +8 durch anderen Zauber
+=&gt; +13 Feuerresistenz, durch +5 natürlich und +8 der höchsten externen Quelle (nur +8 durch höchste Quelle?)
+
+vs
+
+Andauernde Resistenzen können pro Quelle jeweils nur einmal angewendet werden, sind aber ansonsten nicht stapelbar.
+
+Beispiel:
+Charakter mit +5 natürlicher Feuerresistenz, +3 Ring, +4 Rüstung, +5 Trank, +6 Talent, +7 Zauber, +8 zweiter Zauber
+=&gt; +22 Feuerresistenz, durch +5 natürlich, +4 höchste (Aus-)Rüstung, +5 Alchemie, +8 größte Talent-/Zauberquelle.
+(Klingt recht hoch, aber erfordert gute Vorbereitung und im Lategame können DrachenMagier definitiv mehr als 22 Feuerschaden verursachen.)
+???``
+
+---
+
+!Resistenzen
+-&gt; [[siehe auch Schadensarten|Schadensart]]
+
+!!Elementare Resistenzen
+*Feuerresistenz
+*Kälteresistenz
+*Blitzresistenz
+
+!!Verschleißresistenzen
+*Säureresistenz
+*Giftresistenz
+*Nekrotische Resistenz
+
+!!Abschirmende Resistenzen
+*Druckwellenresistenz ? (macht das überhaupt Sinn?)
+*Schallresistenz ? (du meinst taub sein?)
+
+!!Mystische Resistenzen
+*Mentale Resistenz
+*Strahlungsresistenz</pre>
+</div>
 <div created="20220803162255645" creator="Keks" modified="20220803163455301" modifier="Keks" title="Rettungswürfe">
 <pre>Arten von Rettungswürfen:
 
@@ -16659,7 +16715,7 @@ Tabelle für übliche Rüstungswerte:
 |Plattenrüstung|  6 | 10 |  8 |
 |Gambeson      |  3 |  2 |  1 |</pre>
 </div>
-<div created="20230127110910167" creator="Keks" modified="20230127112910062" modifier="Keks" tags="" title="Schadensarten">
+<div created="20230127110910167" creator="Keks" modified="20230201130857308" modifier="Keks" tags="" title="Schadensart">
 <pre>!! Physisch
 * Schmetterschaden (Stärke): Stumpfe Waffen, Keulen, Kampfstäbe, Stumpfe Geschosse
 * Schnittschaden (Athletik): Klingen, Schrapnell, Peitsche
@@ -16748,7 +16804,7 @@ Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollst
 
 ''Talente'' sind vom [[Spieler]] erwünschte Befähigungen, die im Laufe der [[Kampagne]] erlernt werden.</pre>
 </div>
-<div created="20220714203025967" creator="Keks" modified="20230201125711969" modifier="Keks" tags="" title="Übersicht">
+<div created="20220714203025967" creator="Keks" modified="20230201135324750" modifier="Keks" tags="" title="Übersicht">
 <pre>&lt;style&gt;
 	h2 { padding: 0; margin: 0; }
 	.border { box-shadow: 0 0 16px rgba(0 0 0 / calc(1/3)); }
@@ -16808,6 +16864,7 @@ Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollst
 		
 !! Änderungen
 
+*[[Resistenzen|Resistenz]] - //Schmerzresistenz// absorbiert jetzt bloß halben Schaden, kann also effektiv die [[Ausdauer]] 'nur' verdoppeln.
 
 		&lt;/div&gt;
 

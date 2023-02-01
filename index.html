@@ -10805,8 +10805,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20230201115842630" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>removed redundant draft</pre>
+<div created="20210715231539247" creator="Keks" modified="20230201124540946" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>rework overview</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15462,7 +15462,7 @@ exports.create = function(wiki) {
 <div created="20210704210610637" modified="20210704210610637" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210704210019337" creator="Keks" modified="20230130141512809" modifier="Keks" title="$:/state/sidebar">
+<div created="20210704210019337" creator="Keks" modified="20230201123452595" modifier="Keks" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210712114731652" creator="Keks" modified="20210929132147738" modifier="Keks" title="$:/state/tab--1418380610">
@@ -16748,42 +16748,101 @@ Talente können alles mögliche sein und sind somit zu zahlreich, um eine vollst
 
 ''Talente'' sind vom [[Spieler]] erwünschte Befähigungen, die im Laufe der [[Kampagne]] erlernt werden.</pre>
 </div>
-<div created="20220714203025967" creator="Keks" modified="20230130142743126" modifier="Keks" tags="" title="Übersicht">
+<div created="20220714203025967" creator="Keks" modified="20230201124532808" modifier="Keks" tags="" title="Übersicht">
 <pre>&lt;style&gt;
-h2{padding:0;margin:0;}
-.border{box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+	h2 { padding: 0; margin: 0; }
+	.border { box-shadow: 0 0 16px rgba(0 0 0 / calc(1/3)); }
+	.box { padding: 16px; border-radius: 16px; }
+	.flex {
+  	display: flex;
+  	flex-flow: row wrap;
+		justify-content: flex-start;
+		gap: 16px;
+	}
+	.flex &gt; div {
+		flex-basis: 23%
+	}
+	input[type=&quot;number&quot;] {
+  	width: 48px;
+  	height: 24px;
+  	font-size: 16px;
+  	padding: 0;
+		margin: 0;
+  	border: 1px solid gray;
+  	border-radius: 8px;
+		text-align: center;
+		
+		-moz-appearance: textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+  	-webkit-appearance: none;
+  	margin: 0;
+	}
+	
+	@media (max-width: 1600px) {
+		.flex { justify-content: space-evenly; }
+  	.flex &gt; div {
+    	flex-basis: 45%;
+  	}
+	}
+	
+	@media (max-width: 960px) {
+  	.flex &gt; div {
+    	flex-basis: 90%;
+  	}
+	}
 &lt;/style&gt;
 
-&lt;div style=&quot;display:flex;flex-wrap:wrap;justify-content:flex-start;&quot;&gt;
-    &lt;div class=&quot;border&quot; style=&quot;margin:8px;padding:8px;border-radius:16px;min-width:256px;max-width:512px;&quot;&gt;
+&lt;div id=&quot;start-container&quot; class=&quot;flex&quot;&gt;
+
+		&lt;div id=&quot;start-change&quot; class=&quot;border box&quot;&gt;
+		
+!! Änderungen
+
+
+		&lt;/div&gt;
+
+    &lt;div id=&quot;start-rules&quot; class=&quot;border box&quot;&gt;
 
 !! Regeln:
 
 *[[Grundregelwerk]]
 
-&lt;/div&gt;
+		&lt;/div&gt;
 
-    &lt;div class=&quot;border&quot; style=&quot;margin:8px;padding:8px;border-radius:16px;min-width:256px;max-width:512px;&quot;&gt;
+    &lt;div id=&quot;start-resources&quot; class=&quot;border box&quot;&gt;
 
 !! Ressourcen
 
-*[ext[Charakterbogen.xlsx|asset/file/Charakterbogen.xlsx]]&lt;a href=&quot;asset/file/Charakterbogen.xlsx&quot; download=&quot;Charakterbogen.xlsx&quot;&gt;&lt;img src=&quot;asset/icon/xlsx.svg&quot; style=&quot;vertical-align:middle;width:18px;margin:0;padding:0;filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));&quot;&gt;&lt;/a&gt; - Ein teilweise automatisierter Charakterbogen, der einige Werte von selbst berechnet (z.B. Ausdauer, Zauberplätze, ausgegeben Punkte, etc.)
+*[ext[Charakterbogen.xlsx|asset/file/Charakterbogen.xlsx]]&lt;a href=&quot;asset/file/Charakterbogen.xlsx&quot; download=&quot;Charakterbogen.xlsx&quot;&gt;&lt;img src=&quot;asset/icon/xlsx.svg&quot; style=&quot;vertical-align:middle;width:18px;margin:0;padding:0;filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));&quot;&gt;
+
+&lt;/a&gt; - Ein teilweise automatisierter Charakterbogen, der einige Werte von selbst berechnet (z.B. Ausdauer, Zauberplätze, ausgegeben Punkte, etc.)
 
 
 * [[Charakterkarten|https://jaegerstein.github.io/cg/cg.html]] - Zum erstellen von Eigenschafts-/Talent-/Zauberkarten etc.
 
     &lt;/div&gt;
-		&lt;div class=&quot;border&quot; style=&quot;margin:8px;padding:8px;border-radius:16px;min-width:256px;max-width:512px;&quot;&gt;
 		
-		!!Würfel für Fernkampfschaden
-		⮩ Siehe [[Fernkampf]]&lt;br&gt;&lt;br&gt;
-		&lt;div style=&quot;width=100%;box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 9px;padding:15px;border-radius:16px;&quot;&gt;
-		&lt;label for=&quot;dice&quot;&gt;Schadenspotenzial (`Wurfergebnis - Schwierigkeitsgrad`)&lt;/label&gt;
-    &lt;input style=&quot;margin: 16px&quot; type=&quot;number&quot; id=&quot;ranged-damage&quot; name=&quot;dice&quot; min=&quot;1&quot;&gt;
-		&lt;span&gt;Schadenswürfel: &lt;/span&gt;&lt;span id=&quot;ranged-dice&quot;&gt;&lt;/span&gt;
-		&lt;&lt;rangeddice&gt;&gt;
-		&lt;/div&gt;
-&lt;/div&gt;
+		&lt;div class=&quot;border box&quot;&gt;
+		
+!!Würfel für Fernkampfschaden
+⮩ Siehe [[Fernkampf]]&lt;br&gt;&lt;br&gt;
+		
+			&lt;div style=&quot;width: 100%; display: flex; justify-content: center;&quot;&gt;
+				&lt;div class=&quot;border box&quot; style=&quot;width: 90%;&quot;&gt;
+					&lt;label for=&quot;dice&quot; style=&quot;white-space: nowrap;&quot;&gt;Schadenspotenzial (W - SG)&lt;/label&gt;&lt;br&gt;
+				
+    			&lt;input type=&quot;number&quot; id=&quot;ranged-damage&quot; name=&quot;dice&quot; min=&quot;1&quot;&gt;
+				
+					&lt;span&gt;Schadenswürfel: &lt;/span&gt;&lt;span id=&quot;ranged-dice&quot;&gt;&lt;/span&gt;
+					&lt;&lt;rangeddice&gt;&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+	&lt;/div&gt;
+	
 &lt;/div&gt;</pre>
 </div>
 <div created="20220716210330856" creator="Keks" modified="20230127113409771" modifier="Keks" title="Verletzungen">

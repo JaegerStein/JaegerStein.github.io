@@ -355,8 +355,6 @@ Error message and password prompt
 
 <li>Charaktererstellung</li>
 
-<li>Draft of 'Übersicht' by Keks</li>
-
 <li>Eigenschaften</li>
 
 <li>Fähigkeiten</li>
@@ -10807,8 +10805,8 @@ exports.create = function(wiki) {
 <div created="20210712114811254" creator="Keks" modified="20210715164702039" modifier="Keks" title="$:/language">
 <pre>$:/languages/de-DE</pre>
 </div>
-<div created="20210715231539247" creator="Keks" modified="20230130144820180" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>D =&gt; W</pre>
+<div created="20210715231539247" creator="Keks" modified="20230201115842630" modifier="Keks" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>removed redundant draft</pre>
 </div>
 <div created="20210704210845198" modified="20210704210849663" title="$:/language/DefaultNewTiddlerTitle">
 <pre>Neuer Eintrag</pre>
@@ -15497,8 +15495,8 @@ exports.create = function(wiki) {
 <div created="20210707170241069" creator="Keks" modified="20230129141029686" modifier="Keks" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20210704205300562" creator="Keks" modified="20230130144740933" modifier="Keks" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20210704205300562" creator="Keks" modified="20230201115751009" modifier="Keks" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210704205856024" creator="Keks" modified="20220731141737020" modifier="Keks" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -15527,7 +15525,7 @@ exports.create = function(wiki) {
 <div created="20210706210050818" creator="K" modified="20210712114457674" modifier="Kek" title="$:/status/UserName">
 <pre>Keks</pre>
 </div>
-<div created="20230130144428370" creator="Keks" list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" modified="20230130144743279" modifier="Keks" title="$:/StoryList">
+<div list="$:/STRG+UMSCHALT+R Übersicht $:/language/ControlPanel/Saving/GitService/CommitMessage" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210716204346998" creator="Keks" modified="20210716204606847" modifier="Keks" tags="" title="$:/STRG+UMSCHALT+R">
@@ -16342,42 +16340,6 @@ Hier noch eine hilfreiche Tabelle, die beispielhaft Basiswerte abhängig von der
 <pre>*[[Professionen]]
 *[[Persönlichkeit &amp; Hintergrund]]
 *[[Inventar]]</pre>
-</div>
-<div created="20230130141407972" creator="Keks" modified="20230130141438205" modifier="Keks" title="Draft of 'Übersicht' by Keks">
-<pre>&lt;style&gt;
-h2{padding:0;margin:0;}
-.border{box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
-&lt;/style&gt;
-
-&lt;div style=&quot;display:flex;flex-wrap:wrap;justify-content:flex-start;&quot;&gt;
-    &lt;div class=&quot;border&quot; style=&quot;margin:8px;padding:8px;border-radius:16px;min-width:256px;max-width:512px;&quot;&gt;
-
-!! Regeln:
-
-*[[Grundregelwerk]]
-
-&lt;/div&gt;
-
-    &lt;div class=&quot;border&quot; style=&quot;margin:8px;padding:8px;border-radius:16px;min-width:256px;max-width:512px;&quot;&gt;
-
-!! Ressourcen
-
-*[ext[Charakterbogen.xlsx|asset/file/Charakterbogen.xlsx]]&lt;a href=&quot;asset/file/Charakterbogen.xlsx&quot; download=&quot;Charakterbogen.xlsx&quot;&gt;&lt;img src=&quot;asset/icon/xlsx.svg&quot; style=&quot;vertical-align:middle;width:18px;margin:0;padding:0;filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));&quot;&gt;&lt;/a&gt; - Ein teilweise automatisierter Charakterbogen, der einige Werte von selbst berechnet (z.B. Ausdauer, Zauberplätze, ausgegeben Punkte, etc.)
-
-
-* [[Charakterkarten|https://jaegerstein.github.io/cg/cg.html]] - Zum erstellen von Eigenschafts-/Talent-/Zauberkarten etc.
-
-    &lt;/div&gt;
-		&lt;div class=&quot;border&quot; style=&quot;margin:8px;padding:8px;border-radius:16px;min-width:256px;max-width:512px;&quot;&gt;
-		
-		!!Würfel für Fernkampfschaden
-		⮩ Siehe [[Fernkampf]]&lt;br&gt;&lt;br&gt;
-		&lt;label for=&quot;dice&quot;&gt;Schadenspotenzial (`Wurfergebnis - Schwierigkeitsgrad`)&lt;/label&gt;
-    &lt;input style=&quot;margin: 16px&quot; type=&quot;number&quot; id=&quot;ranged-damage&quot; name=&quot;dice&quot; min=&quot;1&quot;&gt;
-		&lt;span&gt;Schadenswürfel: &lt;/span&gt;&lt;span id=&quot;ranged-dice&quot;&gt;&lt;/span&gt;
-		&lt;&lt;rangeddice&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;</pre>
 </div>
 <div created="20220715175423468" creator="Keks" modified="20220803164221900" modifier="Keks" title="Eigenschaften">
 <pre>''Eigenschaften'' sind spezielle Statuswerte eines Charakters, die entweder wahr oder falsch sind und im Normalfall nicht gesteigert werden können. Eigenschaften sind oft passiv, müssen also nicht explizit angewendet werden, können dem [[Charakter|Charaktere]] aber auch aktive Befähigungen verschaffen.&lt;br&gt;
